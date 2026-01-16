@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\MOSTEN\\Desktop\\Pessoal\\portal-aluno\\Portal-Aluno\\",
+  "WorkspaceRootPath": "C:\\Users\\MOSTEN\\Desktop\\Pessoal\\portal-aluno\\Back\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{934ECB6D-05D4-4670-9336-6E534DCCD571}|Portal-Aluno\\Portal-Aluno.csproj|c:\\users\\mosten\\desktop\\pessoal\\portal-aluno\\portal-aluno\\portal-aluno\\portal-aluno.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "AbsoluteMoniker": "D:0:0:{934ECB6D-05D4-4670-9336-6E534DCCD571}|Portal-Aluno\\Portal-Aluno.csproj|c:\\users\\mosten\\desktop\\pessoal\\portal-aluno\\back\\portal-aluno\\portal-aluno.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{934ECB6D-05D4-4670-9336-6E534DCCD571}|Portal-Aluno\\Portal-Aluno.csproj|solutionrelative:portal-aluno\\portal-aluno.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
@@ -28,13 +28,13 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Portal-Aluno.csproj",
-              "DocumentMoniker": "C:\\Users\\MOSTEN\\Desktop\\Pessoal\\portal-aluno\\Portal-Aluno\\Portal-Aluno\\Portal-Aluno.csproj",
+              "DocumentMoniker": "C:\\Users\\MOSTEN\\Desktop\\Pessoal\\portal-aluno\\Back\\Portal-Aluno\\Portal-Aluno.csproj",
               "RelativeDocumentMoniker": "Portal-Aluno\\Portal-Aluno.csproj",
-              "ToolTip": "C:\\Users\\MOSTEN\\Desktop\\Pessoal\\portal-aluno\\Portal-Aluno\\Portal-Aluno\\Portal-Aluno.csproj",
+              "ToolTip": "C:\\Users\\MOSTEN\\Desktop\\Pessoal\\portal-aluno\\Back\\Portal-Aluno\\Portal-Aluno.csproj",
               "RelativeToolTip": "Portal-Aluno\\Portal-Aluno.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-11-26T18:05:31.251Z",
+              "WhenOpened": "2025-12-09T17:25:43.178Z",
               "EditorCaption": ""
             }
           ]
