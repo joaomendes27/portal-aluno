@@ -1,1 +1,37 @@
-<p>auth works!</p>
+<div class="auth-container">
+  <div class="auth-header">
+    <div class="auth-logo">
+      <span>UNISANTA</span>
+    </div>
+    <div class="auth-title">
+      <h1>Portal do Aluno</h1>
+      <p>Bem-vindo à sua área acadêmica</p>
+    </div>
+  </div>
+  <div class="auth-body">
+    <div class="auth-buttons">
+      <button class="auth-button active">Entrar</button>
+      <button class="auth-button">Cadastrar</button>
+    </div>
+    <form class="auth-form" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <app-input
+          label="RA ou E-mail"
+          placeholder="RA ou E-mail"
+          id="login"
+        ></app-input>
+      </div>
+      <div class="form-group">
+        <app-input label="Senha" placeholder="Senha" id="password"></app-input>
+      </div>
+      <app-button label="Acessar"></app-button>
+    </form>
+    <div class="quick-access">
+      <span>Acesso rápido</span>
+    </div>
+    <div class="auth-footer">
+      <a href="#">Precisa de ajuda? Fale conosco</a>
+      <p>© Unisanta - Universidade Santa Cecília</p>
+    </div>
+  </div>
+</div>

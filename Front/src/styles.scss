@@ -1,1 +1,19 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+    --color-primary: #0044A9;
+    --color-secondary: #002F73;
+    --color-text: #2B2B2A;
+    --color-main-text: #006CCE;
+    --color-outro: #3C3C3B;
+    --font-family: "Open Sans";
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: var(--font-family) }
+
+
