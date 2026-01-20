@@ -1,0 +1,12 @@
+C:\Users\MOSTEN\Desktop\Pessoal\portal-aluno\Back\Portal-Aluno.Domain\bin\Debug\net8.0\Portal_Aluno.Domain.deps.json
+C:\Users\MOSTEN\Desktop\Pessoal\portal-aluno\Back\Portal-Aluno.Domain\bin\Debug\net8.0\Portal_Aluno.Domain.dll
+C:\Users\MOSTEN\Desktop\Pessoal\portal-aluno\Back\Portal-Aluno.Domain\bin\Debug\net8.0\Portal_Aluno.Domain.pdb
+C:\Users\MOSTEN\Desktop\Pessoal\portal-aluno\Back\Portal-Aluno.Domain\obj\Debug\net8.0\Portal_Aluno.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MOSTEN\Desktop\Pessoal\portal-aluno\Back\Portal-Aluno.Domain\obj\Debug\net8.0\Portal_Aluno.Domain.AssemblyInfoInputs.cache
+C:\Users\MOSTEN\Desktop\Pessoal\portal-aluno\Back\Portal-Aluno.Domain\obj\Debug\net8.0\Portal_Aluno.Domain.AssemblyInfo.cs
+C:\Users\MOSTEN\Desktop\Pessoal\portal-aluno\Back\Portal-Aluno.Domain\obj\Debug\net8.0\Portal_Aluno.Domain.csproj.CoreCompileInputs.cache
+C:\Users\MOSTEN\Desktop\Pessoal\portal-aluno\Back\Portal-Aluno.Domain\obj\Debug\net8.0\Portal_Aluno.Domain.sourcelink.json
+C:\Users\MOSTEN\Desktop\Pessoal\portal-aluno\Back\Portal-Aluno.Domain\obj\Debug\net8.0\Portal_Aluno.Domain.dll
+C:\Users\MOSTEN\Desktop\Pessoal\portal-aluno\Back\Portal-Aluno.Domain\obj\Debug\net8.0\refint\Portal_Aluno.Domain.dll
+C:\Users\MOSTEN\Desktop\Pessoal\portal-aluno\Back\Portal-Aluno.Domain\obj\Debug\net8.0\Portal_Aluno.Domain.pdb
+C:\Users\MOSTEN\Desktop\Pessoal\portal-aluno\Back\Portal-Aluno.Domain\obj\Debug\net8.0\ref\Portal_Aluno.Domain.dll

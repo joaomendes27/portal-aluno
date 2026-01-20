@@ -1,0 +1,334 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\MOSTEN\\Desktop\\Pessoal\\portal-aluno\\Back\\Portal-Aluno\\Portal_Aluno_API.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\MOSTEN\\Desktop\\Pessoal\\portal-aluno\\Back\\Portal-Aluno.Application\\Portal_Aluno.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\MOSTEN\\Desktop\\Pessoal\\portal-aluno\\Back\\Portal-Aluno.Application\\Portal_Aluno.Application.csproj",
+        "projectName": "Portal_Aluno.Application",
+        "projectPath": "C:\\Users\\MOSTEN\\Desktop\\Pessoal\\portal-aluno\\Back\\Portal-Aluno.Application\\Portal_Aluno.Application.csproj",
+        "packagesPath": "C:\\Users\\MOSTEN\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\MOSTEN\\Desktop\\Pessoal\\portal-aluno\\Back\\Portal-Aluno.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\MOSTEN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\MOSTEN\\Desktop\\Pessoal\\portal-aluno\\Back\\Portal-Aluno.Domain\\Portal_Aluno.Domain.csproj": {
+                "projectPath": "C:\\Users\\MOSTEN\\Desktop\\Pessoal\\portal-aluno\\Back\\Portal-Aluno.Domain\\Portal_Aluno.Domain.csproj"
+              },
+              "C:\\Users\\MOSTEN\\Desktop\\Pessoal\\portal-aluno\\Back\\Portal-Aluno.Infrastructure\\Portal_Aluno.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\MOSTEN\\Desktop\\Pessoal\\portal-aluno\\Back\\Portal-Aluno.Infrastructure\\Portal_Aluno.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "BCrypt.Net-Next": {
+              "target": "Package",
+              "version": "[4.0.3, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.2.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.309/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\MOSTEN\\Desktop\\Pessoal\\portal-aluno\\Back\\Portal-Aluno.Domain\\Portal_Aluno.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\MOSTEN\\Desktop\\Pessoal\\portal-aluno\\Back\\Portal-Aluno.Domain\\Portal_Aluno.Domain.csproj",
+        "projectName": "Portal_Aluno.Domain",
+        "projectPath": "C:\\Users\\MOSTEN\\Desktop\\Pessoal\\portal-aluno\\Back\\Portal-Aluno.Domain\\Portal_Aluno.Domain.csproj",
+        "packagesPath": "C:\\Users\\MOSTEN\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\MOSTEN\\Desktop\\Pessoal\\portal-aluno\\Back\\Portal-Aluno.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\MOSTEN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.309/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\MOSTEN\\Desktop\\Pessoal\\portal-aluno\\Back\\Portal-Aluno.Infrastructure\\Portal_Aluno.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\MOSTEN\\Desktop\\Pessoal\\portal-aluno\\Back\\Portal-Aluno.Infrastructure\\Portal_Aluno.Infrastructure.csproj",
+        "projectName": "Portal_Aluno.Infrastructure",
+        "projectPath": "C:\\Users\\MOSTEN\\Desktop\\Pessoal\\portal-aluno\\Back\\Portal-Aluno.Infrastructure\\Portal_Aluno.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\MOSTEN\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\MOSTEN\\Desktop\\Pessoal\\portal-aluno\\Back\\Portal-Aluno.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\MOSTEN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\MOSTEN\\Desktop\\Pessoal\\portal-aluno\\Back\\Portal-Aluno.Domain\\Portal_Aluno.Domain.csproj": {
+                "projectPath": "C:\\Users\\MOSTEN\\Desktop\\Pessoal\\portal-aluno\\Back\\Portal-Aluno.Domain\\Portal_Aluno.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "EFCore.NamingConventions": {
+              "target": "Package",
+              "version": "[8.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "target": "Package",
+              "version": "[8.0.5, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[8.0.4, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[7.5.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.309/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\MOSTEN\\Desktop\\Pessoal\\portal-aluno\\Back\\Portal-Aluno\\Portal_Aluno_API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\MOSTEN\\Desktop\\Pessoal\\portal-aluno\\Back\\Portal-Aluno\\Portal_Aluno_API.csproj",
+        "projectName": "Portal_Aluno_API",
+        "projectPath": "C:\\Users\\MOSTEN\\Desktop\\Pessoal\\portal-aluno\\Back\\Portal-Aluno\\Portal_Aluno_API.csproj",
+        "packagesPath": "C:\\Users\\MOSTEN\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\MOSTEN\\Desktop\\Pessoal\\portal-aluno\\Back\\Portal-Aluno\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\MOSTEN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\MOSTEN\\Desktop\\Pessoal\\portal-aluno\\Back\\Portal-Aluno.Application\\Portal_Aluno.Application.csproj": {
+                "projectPath": "C:\\Users\\MOSTEN\\Desktop\\Pessoal\\portal-aluno\\Back\\Portal-Aluno.Application\\Portal_Aluno.Application.csproj"
+              },
+              "C:\\Users\\MOSTEN\\Desktop\\Pessoal\\portal-aluno\\Back\\Portal-Aluno.Domain\\Portal_Aluno.Domain.csproj": {
+                "projectPath": "C:\\Users\\MOSTEN\\Desktop\\Pessoal\\portal-aluno\\Back\\Portal-Aluno.Domain\\Portal_Aluno.Domain.csproj"
+              },
+              "C:\\Users\\MOSTEN\\Desktop\\Pessoal\\portal-aluno\\Back\\Portal-Aluno.Infrastructure\\Portal_Aluno.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\MOSTEN\\Desktop\\Pessoal\\portal-aluno\\Back\\Portal-Aluno.Infrastructure\\Portal_Aluno.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.5, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.6.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.309/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

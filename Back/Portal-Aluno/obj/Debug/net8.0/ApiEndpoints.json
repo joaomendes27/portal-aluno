@@ -1,0 +1,34 @@
+[
+  {
+    "ContainingType": "Portal_Aluno.Controllers.UsuariosController",
+    "Method": "Cadastrar",
+    "RelativePath": "api/Usuarios/cadastrar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Portal_Aluno.Application.Features.UsuarioFeature.DTOs.CadastrarUsuarioRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Portal_Aluno.Controllers.UsuariosController",
+    "Method": "Login",
+    "RelativePath": "api/Usuarios/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Portal_Aluno.Application.Features.UsuarioFeature.DTOs.LoginRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

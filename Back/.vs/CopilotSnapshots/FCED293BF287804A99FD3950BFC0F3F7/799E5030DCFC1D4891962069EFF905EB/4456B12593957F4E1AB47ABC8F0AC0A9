@@ -1,0 +1,12 @@
+﻿{
+  "ConnectionStrings": {
+    "Default": "Host=localhost;Port=5433;Database=portal_db;Username=portal;Password=portal"
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "AllowedHosts": "*"
+}

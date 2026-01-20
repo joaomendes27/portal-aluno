@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<RootNamespace>Portal_Aluno.Infrastructure</RootNamespace>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="EFCore.NamingConventions" Version="8.0.3" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.5" />
+		<PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.4" />
+		<PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="7.5.2" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\Portal-Aluno.Domain\Portal_Aluno.Domain.csproj" />
+	</ItemGroup>
+</Project>
