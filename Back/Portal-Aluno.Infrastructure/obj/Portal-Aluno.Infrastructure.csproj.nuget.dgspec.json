@@ -4,12 +4,12 @@
     "C:\\Users\\MOSTEN\\Desktop\\Pessoal\\portal-aluno\\Back\\Portal-Aluno.Infrastructure\\Portal-Aluno.Infrastructure.csproj": {}
   },
   "projects": {
-    "C:\\Users\\MOSTEN\\Desktop\\Pessoal\\portal-aluno\\Back\\Portal-Aluno.Domain\\Portal-Aluno.Domain.csproj": {
+    "C:\\Users\\MOSTEN\\Desktop\\Pessoal\\portal-aluno\\Back\\Portal-Aluno.Domain\\Portal_Aluno.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\MOSTEN\\Desktop\\Pessoal\\portal-aluno\\Back\\Portal-Aluno.Domain\\Portal-Aluno.Domain.csproj",
-        "projectName": "Portal-Aluno.Domain",
-        "projectPath": "C:\\Users\\MOSTEN\\Desktop\\Pessoal\\portal-aluno\\Back\\Portal-Aluno.Domain\\Portal-Aluno.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\MOSTEN\\Desktop\\Pessoal\\portal-aluno\\Back\\Portal-Aluno.Domain\\Portal_Aluno.Domain.csproj",
+        "projectName": "Portal_Aluno.Domain",
+        "projectPath": "C:\\Users\\MOSTEN\\Desktop\\Pessoal\\portal-aluno\\Back\\Portal-Aluno.Domain\\Portal_Aluno.Domain.csproj",
         "packagesPath": "C:\\Users\\MOSTEN\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\MOSTEN\\Desktop\\Pessoal\\portal-aluno\\Back\\Portal-Aluno.Domain\\obj\\",
         "projectStyle": "PackageReference",
@@ -97,8 +97,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\MOSTEN\\Desktop\\Pessoal\\portal-aluno\\Back\\Portal-Aluno.Domain\\Portal-Aluno.Domain.csproj": {
-                "projectPath": "C:\\Users\\MOSTEN\\Desktop\\Pessoal\\portal-aluno\\Back\\Portal-Aluno.Domain\\Portal-Aluno.Domain.csproj"
+              "C:\\Users\\MOSTEN\\Desktop\\Pessoal\\portal-aluno\\Back\\Portal-Aluno.Domain\\Portal_Aluno.Domain.csproj": {
+                "projectPath": "C:\\Users\\MOSTEN\\Desktop\\Pessoal\\portal-aluno\\Back\\Portal-Aluno.Domain\\Portal_Aluno.Domain.csproj"
               }
             }
           }
@@ -119,15 +119,21 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "EFCore.NamingConventions": {
+              "target": "Package",
+              "version": "[8.0.3, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
               "target": "Package",
               "version": "[8.0.5, )"
             },
             "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
-              "version": "[9.0.2, )"
+              "version": "[8.0.4, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[7.5.2, )"
             }
           },
           "imports": [

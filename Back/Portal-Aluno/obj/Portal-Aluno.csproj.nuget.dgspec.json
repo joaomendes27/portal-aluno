@@ -31,7 +31,14 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\MOSTEN\\Desktop\\Pessoal\\portal-aluno\\Back\\Portal-Aluno.Domain\\Portal-Aluno.Domain.csproj": {
+                "projectPath": "C:\\Users\\MOSTEN\\Desktop\\Pessoal\\portal-aluno\\Back\\Portal-Aluno.Domain\\Portal-Aluno.Domain.csproj"
+              },
+              "C:\\Users\\MOSTEN\\Desktop\\Pessoal\\portal-aluno\\Back\\Portal-Aluno.Infrastructure\\Portal-Aluno.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\MOSTEN\\Desktop\\Pessoal\\portal-aluno\\Back\\Portal-Aluno.Infrastructure\\Portal-Aluno.Infrastructure.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -49,6 +56,16 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "BCrypt.Net-Next": {
+              "target": "Package",
+              "version": "[4.0.3, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.2.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -184,15 +201,21 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "EFCore.NamingConventions": {
+              "target": "Package",
+              "version": "[8.0.3, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
               "target": "Package",
               "version": "[8.0.5, )"
             },
             "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
-              "version": "[9.0.2, )"
+              "version": "[8.0.4, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[7.5.2, )"
             }
           },
           "imports": [
@@ -271,6 +294,14 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.5, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.6.2, )"

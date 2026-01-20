@@ -2,7 +2,7 @@ namespace Portal_Aluno.Domain.Entities;
 
 public class Aluno
 {
-    public string Ra { get; set; } = null!;
+    public string Ra { get; set; }
     public string Nome { get; set; }
     public string Email { get; set; }
     public DateOnly DataNascimento { get; set; }
