@@ -6,7 +6,7 @@
         public string Login { get; set; } = null!; 
         public string Senha { get; set; } = null!;
         public string Tipo { get; set; } = null!;  
-        public string? Referencia { get; set; } 
+        public string? ReferenciaId { get; set; } 
 
         public Aluno? Aluno { get; set; }
         public Professor? Professor { get; set; }

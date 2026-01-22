@@ -24,16 +24,27 @@ public class AppDbContext : DbContext
             b.HasKey(x => x.Ra);
         });
 
+        modelBuilder.Entity<CursoDisciplina>(b =>
+        {
+            b.ToTable("curso_disciplina");
+        });
+
         modelBuilder.Entity<MatriculaTurma>(b =>
         {
+            b.ToTable("matricula_turma");
             b.Property(x => x.Nota).HasPrecision(4, 2);
         });
 
         modelBuilder.Entity<Usuario>(b =>
         {
             b.HasIndex(x => x.Login).IsUnique();
+
+            b.Ignore(x => x.Aluno);
+            b.Ignore(x => x.Professor);
         });
     }
 }
+
+
 
 

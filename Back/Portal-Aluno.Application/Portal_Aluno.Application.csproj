@@ -13,4 +13,8 @@
 	  <ProjectReference Include="..\Portal-Aluno.Domain\Portal_Aluno.Domain.csproj" />
 	  <ProjectReference Include="..\Portal-Aluno.Infrastructure\Portal_Aluno.Infrastructure.csproj" />
 	</ItemGroup>
+	<ItemGroup>
+	  <Folder Include="Exceptions\" />
+	  <Folder Include="Features\UsuarioFeature\Commands\CadastrarUsuario\" />
+	</ItemGroup>
 </Project>
