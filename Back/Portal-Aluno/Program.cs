@@ -4,6 +4,7 @@ using Microsoft.IdentityModel.Tokens;
 using Portal_Aluno.Application;
 using Portal_Aluno.Domain.Interfaces;
 using Portal_Aluno.Infrastructure.Data.DbContexts;
+using Portal_Aluno.Infrastructure.Data.Repositories;
 using Portal_Aluno.Infrastructure.Services;
 using System.Text;
 
@@ -23,6 +24,10 @@ builder.Services.AddMediatR(cfg =>
     cfg.RegisterServicesFromAssembly(typeof(AssemblyReference).Assembly));
 
 builder.Services.AddScoped<ITokenService, TokenService>();
+builder.Services.AddScoped<IAlunoRepository, AlunoRepository>();
+builder.Services.AddScoped<IProfessorRepository, ProfessorRepository>();
+builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 builder.Services.AddAuthentication(options =>
 {

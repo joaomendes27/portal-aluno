@@ -1,20 +1,27 @@
 using MediatR;
 using Portal_Aluno.Domain.Entities;
-using Portal_Aluno.Infrastructure.Data.DbContexts;
+using Portal_Aluno.Domain.Interfaces;
 
 namespace Portal_Aluno.Application.Features.UsuarioFeature.Commands.CadastrarAdmin;
 
 public class CadastrarAdminCommandHandler : IRequestHandler<CadastrarAdminCommand, Unit>
 {
-    private readonly AppDbContext _context;
+    private readonly IUsuarioRepository _usuarioRepository;
+    private readonly IUnitOfWork _unitOfWork;
 
-    public CadastrarAdminCommandHandler(AppDbContext context)
+    public CadastrarAdminCommandHandler(IUsuarioRepository usuarioRepository, IUnitOfWork unitOfWork)
     {
-        _context = context;
+        _usuarioRepository = usuarioRepository;
+        _unitOfWork = unitOfWork;
     }
 
     public async Task<Unit> Handle(CadastrarAdminCommand request, CancellationToken cancellationToken)
     {
+        if (await _usuarioRepository.LoginExistsAsync(request.Dto.Email))
+        {
+            throw new Exception("Este email já está em uso como login.");
+        }
+
         var senhaHash = BCrypt.Net.BCrypt.HashPassword(request.Dto.Senha);
         var novoUsuario = new Usuario
         {
@@ -22,8 +29,8 @@ public class CadastrarAdminCommandHandler : IRequestHandler<CadastrarAdminComman
             Senha = senhaHash,
             Tipo = "adm"
         };
-        await _context.Usuarios.AddAsync(novoUsuario, cancellationToken);
-        await _context.SaveChangesAsync(cancellationToken);
+        await _usuarioRepository.AddAsync(novoUsuario);
+        await _unitOfWork.SaveChangesAsync(cancellationToken);
 
         return Unit.Value;
     }

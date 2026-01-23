@@ -8,6 +8,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Interfaces\Repositories\**" />
+    <EmbeddedResource Remove="Interfaces\Repositories\**" />
+    <None Remove="Interfaces\Repositories\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Enums\" />
   </ItemGroup>
 

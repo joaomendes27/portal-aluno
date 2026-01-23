@@ -1,4 +1,4 @@
-using MediatR;
+using MediatR; 
 using Microsoft.AspNetCore.Mvc;
 using Portal_Aluno.Application.Features.UsuarioFeature.Commands.CadastrarAdmin;
 using Portal_Aluno.Application.Features.UsuarioFeature.Commands.CadastrarAluno;

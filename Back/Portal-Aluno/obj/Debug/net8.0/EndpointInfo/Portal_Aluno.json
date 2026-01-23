@@ -161,6 +161,10 @@
             "type": "string",
             "nullable": true
           },
+          "cpf": {
+            "type": "string",
+            "nullable": true
+          },
           "dataNascimento": {
             "type": "string",
             "format": "date"
@@ -216,6 +220,10 @@
             "nullable": true
           },
           "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "cpf": {
             "type": "string",
             "nullable": true
           },

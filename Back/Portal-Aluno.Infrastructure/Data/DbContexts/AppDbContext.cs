@@ -22,6 +22,7 @@ public class AppDbContext : DbContext
         modelBuilder.Entity<Aluno>(b =>
         {
             b.HasKey(x => x.Ra);
+            b.Property(x => x.Ra).ValueGeneratedOnAdd();
         });
 
         modelBuilder.Entity<CursoDisciplina>(b =>
@@ -44,6 +45,9 @@ public class AppDbContext : DbContext
         });
     }
 }
+
+
+
 
 
 
