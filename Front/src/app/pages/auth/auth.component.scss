@@ -4,11 +4,7 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #fff;
-
-  .unisanta-gradient {
-    background: linear-gradient(135deg, #003366 0%, #0055aa 100%);
-  }
+  background-color: var(--white-color);
 
   .text-sm {
     font-size: 0.875rem;
@@ -27,7 +23,7 @@
   }
 
   .text-white {
-    color: #ffffff;
+    color: var(--white-color);
   }
 
   .rounded-lg {
@@ -35,7 +31,9 @@
   }
 
   .shadow-lg {
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    box-shadow:
+      0 4px 6px -1px rgba(0, 0, 0, 0.1),
+      0 2px 4px -1px rgba(0, 0, 0, 0.06);
   }
 
   .hover\:opacity-90:hover {
@@ -49,7 +47,8 @@
   .auth-header {
     text-align: center;
     padding: 20px;
-    background-color: #f8f9fa;
+    width: 100%;
+    max-width: 450px;
   }
 
   .auth-logo span {
@@ -74,29 +73,13 @@
   .auth-body {
     display: flex;
     flex-direction: column;
-  }
+    width: 100%;
+    max-width: 450px;
+    padding: 0 20px;
+    box-sizing: border-box;
 
-  .auth-buttons {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-  }
-
-  .auth-button {
-    flex: 1;
-    padding: 10px;
-    font-size: 0.875rem;
-    font-weight: 500;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: #ffffff;
-    color: #003366;
-    cursor: pointer;
-    transition: background-color 0.3s;
-
-    &.active {
-      background-color: #003366;
-      color: #ffffff;
+    app-toggle {
+      margin-bottom: 24px;
     }
   }
 
@@ -126,13 +109,15 @@
   .submit-button {
     width: 100%;
     padding: 15px;
-    background: linear-gradient(135deg, #003366 0%, #0055aa 100%);
-    color: #ffffff;
+    background: var(--color-secondary);
+    color: var(--white-color);
     font-weight: bold;
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    transition: opacity 0.3s, transform 0.2s;
+    transition:
+      opacity 0.3s,
+      transform 0.2s;
 
     &:hover {
       opacity: 0.9;

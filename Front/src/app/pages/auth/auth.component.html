@@ -1,7 +1,7 @@
 <div class="auth-container">
   <div class="auth-header">
     <div class="auth-logo">
-      <span>UNISANTA</span>
+      <span>Cooks Academy</span>
     </div>
     <div class="auth-title">
       <h1>Portal do Aluno</h1>
@@ -9,10 +9,11 @@
     </div>
   </div>
   <div class="auth-body">
-    <div class="auth-buttons">
-      <button class="auth-button active">Entrar</button>
-      <button class="auth-button">Cadastrar</button>
-    </div>
+    <app-toggle
+      [options]="userTypeOptions"
+      [value]="userType"
+      (valueChange)="setUserType($event)"
+    ></app-toggle>
     <form class="auth-form" (ngSubmit)="onSubmit()">
       <div class="form-group">
         <app-input
@@ -31,7 +32,7 @@
     </div>
     <div class="auth-footer">
       <a href="#">Precisa de ajuda? Fale conosco</a>
-      <p>© Unisanta - Universidade Santa Cecília</p>
+      <p>© Universidade Federal do Cooks - UFCooks</p>
     </div>
   </div>
 </div>

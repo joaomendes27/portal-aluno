@@ -5,15 +5,20 @@
 }
 
 :root {
-    --color-primary: #0044A9;
-    --color-secondary: #002F73;
-    --color-text: #2B2B2A;
-    --color-main-text: #006CCE;
-    --color-outro: #3C3C3B;
-    --font-family: "Open Sans";
+  --color-primary: #0044a9;
+  --color-secondary: #002f73;
+  --color-text: #2b2b2a;
+  --color-main-text: #006cce;
+  --color-outro: #3c3c3b;
+  --font-family: "Open Sans";
+  --white-color: #fff;
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: var(--font-family) }
-
-
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: var(--font-family);
+}

@@ -1,0 +1,41 @@
+:host {
+  display: block;
+  width: 100%;
+}
+
+.toggle-container {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f0f2f5;
+  padding: 4px;
+  border-radius: 9999px; /* Pill shape */
+  position: relative;
+  border: 1px solid #e5e7eb;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.toggle-button {
+  flex: 1;
+  padding: 10px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 9999px;
+  background-color: transparent;
+  color: #666666;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 1;
+
+  &.active {
+    background-color: var(--color-primary);
+    color: var(--white-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-weight: 600;
+  }
+
+  &:hover:not(.active) {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+}
