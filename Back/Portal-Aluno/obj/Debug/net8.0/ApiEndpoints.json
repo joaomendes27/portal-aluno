@@ -1,15 +1,47 @@
 [
   {
     "ContainingType": "Portal_Aluno.Controllers.UsuariosController",
-    "Method": "Cadastrar",
-    "RelativePath": "api/Usuarios/cadastrar",
+    "Method": "CadastrarAdmin",
+    "RelativePath": "api/Usuarios/cadastrar-admin",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "request",
-        "Type": "Portal_Aluno.Application.Features.UsuarioFeature.DTOs.CadastrarUsuarioRequest",
+        "Type": "Portal_Aluno.Application.Features.UsuarioFeature.DTOs.CadastrarAdminRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Portal_Aluno.Controllers.UsuariosController",
+    "Method": "CadastrarAluno",
+    "RelativePath": "api/Usuarios/cadastrar-aluno",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Portal_Aluno.Application.Features.UsuarioFeature.DTOs.CadastrarAlunoRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Portal_Aluno.Controllers.UsuariosController",
+    "Method": "CadastrarProfessor",
+    "RelativePath": "api/Usuarios/cadastrar-professor",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Portal_Aluno.Application.Features.UsuarioFeature.DTOs.CadastrarProfessorRequest",
         "IsRequired": true
       }
     ],

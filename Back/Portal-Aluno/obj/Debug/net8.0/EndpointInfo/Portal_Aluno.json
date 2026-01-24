@@ -5,7 +5,7 @@
     "version": "1.0"
   },
   "paths": {
-    "/api/Usuarios/cadastrar": {
+    "/api/Usuarios/cadastrar-aluno": {
       "post": {
         "tags": [
           "Usuarios"
@@ -14,17 +14,79 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/CadastrarUsuarioRequest"
+                "$ref": "#/components/schemas/CadastrarAlunoRequest"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/CadastrarUsuarioRequest"
+                "$ref": "#/components/schemas/CadastrarAlunoRequest"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/CadastrarUsuarioRequest"
+                "$ref": "#/components/schemas/CadastrarAlunoRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Usuarios/cadastrar-professor": {
+      "post": {
+        "tags": [
+          "Usuarios"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CadastrarProfessorRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CadastrarProfessorRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CadastrarProfessorRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Usuarios/cadastrar-admin": {
+      "post": {
+        "tags": [
+          "Usuarios"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CadastrarAdminRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CadastrarAdminRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CadastrarAdminRequest"
               }
             }
           }
@@ -70,10 +132,68 @@
   },
   "components": {
     "schemas": {
-      "CadastrarUsuarioRequest": {
+      "CadastrarAdminRequest": {
         "type": "object",
         "properties": {
-          "login": {
+          "nome": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "senha": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CadastrarAlunoRequest": {
+        "type": "object",
+        "properties": {
+          "nome": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "cpf": {
+            "type": "string",
+            "nullable": true
+          },
+          "dataNascimento": {
+            "type": "string",
+            "format": "date"
+          },
+          "cep": {
+            "type": "string",
+            "nullable": true
+          },
+          "rua": {
+            "type": "string",
+            "nullable": true
+          },
+          "numero": {
+            "type": "string",
+            "nullable": true
+          },
+          "bairro": {
+            "type": "string",
+            "nullable": true
+          },
+          "cidade": {
+            "type": "string",
+            "nullable": true
+          },
+          "estado": {
+            "type": "string",
+            "nullable": true
+          },
+          "pais": {
             "type": "string",
             "nullable": true
           },
@@ -81,11 +201,41 @@
             "type": "string",
             "nullable": true
           },
-          "tipo": {
+          "foto": {
             "type": "string",
             "nullable": true
           },
-          "referenciaId": {
+          "celular": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CadastrarProfessorRequest": {
+        "type": "object",
+        "properties": {
+          "nome": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "cpf": {
+            "type": "string",
+            "nullable": true
+          },
+          "titulo": {
+            "type": "string",
+            "nullable": true
+          },
+          "senha": {
+            "type": "string",
+            "nullable": true
+          },
+          "foto": {
             "type": "string",
             "nullable": true
           }

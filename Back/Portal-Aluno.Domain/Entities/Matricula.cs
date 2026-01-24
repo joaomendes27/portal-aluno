@@ -3,7 +3,7 @@ namespace Portal_Aluno.Domain.Entities;
 public class Matricula
 {
     public int Id { get; set; }
-    public string Ra { get; set; }
+    public int Ra { get; set; }
     public int CursoId { get; set; }
     public int Semestre { get; set; }
     public string Turno { get; set; }
