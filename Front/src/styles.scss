@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -10,7 +12,8 @@
   --color-text: #2b2b2a;
   --color-main-text: #006cce;
   --color-outro: #3c3c3b;
-  --font-family: "Open Sans";
+  // --font-family: "Open Sans";
+  --font-family: "Nunito";
   --white-color: #fff;
 }
 

@@ -21,6 +21,10 @@ export class AuthComponent {
     this.userType = type;
   }
 
+  get loginLabel(): string {
+    return this.userType === 'student' ? 'RA ou E-mail' : 'E-mail';
+  }
+
   onSubmit() {
     console.log('Form submitted:', {
       email: this.email,

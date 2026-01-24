@@ -17,8 +17,8 @@
     <form class="auth-form" (ngSubmit)="onSubmit()">
       <div class="form-group">
         <app-input
-          label="RA ou E-mail"
-          placeholder="RA ou E-mail"
+          [label]="loginLabel"
+          [placeholder]="loginLabel"
           id="login"
         ></app-input>
       </div>
