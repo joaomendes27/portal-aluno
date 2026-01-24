@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>Portal-Aluno</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.5" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Portal-Aluno.Application\Portal_Aluno.Application.csproj" />
+    <ProjectReference Include="..\Portal-Aluno.Domain\Portal_Aluno.Domain.csproj" />
+    <ProjectReference Include="..\Portal-Aluno.Infrastructure\Portal_Aluno.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>

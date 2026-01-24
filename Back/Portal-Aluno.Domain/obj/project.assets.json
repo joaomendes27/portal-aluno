@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\MOSTEN\\Desktop\\Pessoal\\portal-aluno\\Back\\Portal-Aluno.Domain\\Portal-Aluno.Domain.csproj",
-      "projectName": "Portal-Aluno.Domain",
-      "projectPath": "C:\\Users\\MOSTEN\\Desktop\\Pessoal\\portal-aluno\\Back\\Portal-Aluno.Domain\\Portal-Aluno.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\MOSTEN\\Desktop\\Pessoal\\portal-aluno\\Back\\Portal-Aluno.Domain\\Portal_Aluno.Domain.csproj",
+      "projectName": "Portal_Aluno.Domain",
+      "projectPath": "C:\\Users\\MOSTEN\\Desktop\\Pessoal\\portal-aluno\\Back\\Portal-Aluno.Domain\\Portal_Aluno.Domain.csproj",
       "packagesPath": "C:\\Users\\MOSTEN\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\MOSTEN\\Desktop\\Pessoal\\portal-aluno\\Back\\Portal-Aluno.Domain\\obj\\",
       "projectStyle": "PackageReference",

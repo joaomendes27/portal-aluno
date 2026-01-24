@@ -1,12 +1,6 @@
-C:\Users\MOSTEN\Desktop\Pessoal\portal-aluno\Back\Portal-Aluno.Infrastructure\bin\Debug\net8.0\Portal-Aluno.Infrastructure.deps.json
-C:\Users\MOSTEN\Desktop\Pessoal\portal-aluno\Back\Portal-Aluno.Infrastructure\bin\Debug\net8.0\Portal-Aluno.Infrastructure.dll
-C:\Users\MOSTEN\Desktop\Pessoal\portal-aluno\Back\Portal-Aluno.Infrastructure\bin\Debug\net8.0\Portal-Aluno.Infrastructure.pdb
+C:\Users\MOSTEN\Desktop\Pessoal\portal-aluno\Back\Portal-Aluno.Infrastructure\obj\Debug\net8.0\Portal-Aluno.Infrastructure.csproj.AssemblyReference.cache
 C:\Users\MOSTEN\Desktop\Pessoal\portal-aluno\Back\Portal-Aluno.Infrastructure\obj\Debug\net8.0\Portal-Aluno.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\MOSTEN\Desktop\Pessoal\portal-aluno\Back\Portal-Aluno.Infrastructure\obj\Debug\net8.0\Portal-Aluno.Infrastructure.AssemblyInfoInputs.cache
 C:\Users\MOSTEN\Desktop\Pessoal\portal-aluno\Back\Portal-Aluno.Infrastructure\obj\Debug\net8.0\Portal-Aluno.Infrastructure.AssemblyInfo.cs
 C:\Users\MOSTEN\Desktop\Pessoal\portal-aluno\Back\Portal-Aluno.Infrastructure\obj\Debug\net8.0\Portal-Aluno.Infrastructure.csproj.CoreCompileInputs.cache
 C:\Users\MOSTEN\Desktop\Pessoal\portal-aluno\Back\Portal-Aluno.Infrastructure\obj\Debug\net8.0\Portal-Aluno.Infrastructure.sourcelink.json
-C:\Users\MOSTEN\Desktop\Pessoal\portal-aluno\Back\Portal-Aluno.Infrastructure\obj\Debug\net8.0\Portal-Aluno.Infrastructure.dll
-C:\Users\MOSTEN\Desktop\Pessoal\portal-aluno\Back\Portal-Aluno.Infrastructure\obj\Debug\net8.0\refint\Portal-Aluno.Infrastructure.dll
-C:\Users\MOSTEN\Desktop\Pessoal\portal-aluno\Back\Portal-Aluno.Infrastructure\obj\Debug\net8.0\Portal-Aluno.Infrastructure.pdb
-C:\Users\MOSTEN\Desktop\Pessoal\portal-aluno\Back\Portal-Aluno.Infrastructure\obj\Debug\net8.0\ref\Portal-Aluno.Infrastructure.dll
