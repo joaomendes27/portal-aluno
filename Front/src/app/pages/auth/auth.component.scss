@@ -1,0 +1,152 @@
+.auth-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--white-color);
+
+  .text-sm {
+    font-size: 0.875rem;
+  }
+
+  .text-gray-400 {
+    color: #b0b0b0;
+  }
+
+  .text-gray-700 {
+    color: #4a4a4a;
+  }
+
+  .text-gray-800 {
+    color: #333333;
+  }
+
+  .text-white {
+    color: var(--white-color);
+  }
+
+  .rounded-lg {
+    border-radius: 0.5rem;
+  }
+
+  .shadow-lg {
+    box-shadow:
+      0 4px 6px -1px rgba(0, 0, 0, 0.1),
+      0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+
+  .hover\:opacity-90:hover {
+    opacity: 0.9;
+  }
+
+  .active\:scale-\[0\.98\]:active {
+    transform: scale(0.98);
+  }
+
+  .auth-header {
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    max-width: 450px;
+  }
+
+  .auth-logo span {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #003366;
+  }
+
+  .auth-title {
+    h1 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #333333;
+    }
+
+    p {
+      font-size: 0.875rem;
+      color: #666666;
+    }
+  }
+
+  .auth-body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 450px;
+    padding: 0 20px;
+    box-sizing: border-box;
+
+    app-toggle {
+      margin-bottom: 24px;
+    }
+  }
+
+  .auth-form {
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-options {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 10px;
+
+      a {
+        font-size: 0.875rem;
+        color: #003366;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .submit-button {
+    width: 100%;
+    padding: 15px;
+    background: var(--color-secondary);
+    color: var(--white-color);
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition:
+      opacity 0.3s,
+      transform 0.2s;
+
+    &:hover {
+      opacity: 0.9;
+    }
+
+    &:active {
+      transform: scale(0.98);
+    }
+  }
+
+  .auth-footer {
+    text-align: center;
+    margin-top: auto;
+    padding: 20px;
+
+    a {
+      font-size: 0.875rem;
+      color: #003366;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    p {
+      font-size: 0.625rem;
+      color: #b0b0b0;
+      margin-top: 10px;
+    }
+  }
+}

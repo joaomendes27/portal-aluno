@@ -1,0 +1,11 @@
+.btn {
+  width: 100%;
+}
+
+.mat-mdc-raised-button:not(:disabled) {
+  background-color: var(--color-primary);
+}
+
+.mat-mdc-raised-button:not(:disabled) {
+  color: #fff;
+}
