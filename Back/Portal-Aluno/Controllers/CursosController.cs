@@ -34,11 +34,9 @@ public class CursosController : ControllerBase
         return CreatedAtAction(nameof(GetCursoById), new { id = cursoId }, request);
     }
 
-    // GET para exemplo, pode ser implementado depois
     [HttpGet("{id}")]
     public IActionResult GetCursoById(int id)
     {
-        // Lógica para buscar o curso por ID
         return Ok(new { Id = id, Message = "Endpoint de busca a ser implementado." });
     }
 }

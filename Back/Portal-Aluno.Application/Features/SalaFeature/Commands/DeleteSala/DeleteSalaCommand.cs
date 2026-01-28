@@ -1,11 +1,8 @@
 using MediatR;
 
-namespace Features.SalaFeature.Commands.DeleteSala;
-
-public class DeleteSalaCommand : IRequest
+public class DeleteSalaCommand : IRequest<Unit>
 {
-    public int Id { get; }
-
+    public int Id { get; set; }
     public DeleteSalaCommand(int id)
     {
         Id = id;

@@ -3,7 +3,7 @@ using Portal_Aluno.Domain.Entities;
 using Portal_Aluno.Domain.Interfaces;
 using Portal_Aluno.Application.Features.SalaFeature.DTOs;
 
-namespace Portal_Aluno.Application.Features.SalaFeature.Commands;
+namespace Portal_Aluno.Application.Features.SalaFeature.Commands.CreateSala;
 
 public class CreateSalaCommandHandler : IRequestHandler<CreateSalaCommand, SalaResponse>
 {

@@ -17,7 +17,6 @@ public class AppDbContext : DbContext
     public DbSet<MatriculaTurma> MatriculasTurma => Set<MatriculaTurma>();
     public DbSet<Usuario> Usuarios => Set<Usuario>();
     public DbSet<Sala> Salas => Set<Sala>();
-    public DbSet<HorarioAula> HorariosAulas => Set<HorarioAula>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -39,22 +38,14 @@ public class AppDbContext : DbContext
 
         modelBuilder.Entity<Turma>(b =>
         {
-            b.HasMany(t => t.HorariosAula)
-                .WithOne(h => h.Turma)
-                .HasForeignKey(h => h.TurmaId);
+            b.HasOne(t => t.Sala)
+                .WithMany()
+                .HasForeignKey(t => t.SalaId);
         });
 
         modelBuilder.Entity<Sala>(b =>
         {
             b.ToTable("salas");
-            b.HasMany(s => s.HorariosAula)
-                .WithOne(h => h.Sala)
-                .HasForeignKey(h => h.SalaId);
-        });
-
-        modelBuilder.Entity<HorarioAula>(b =>
-        {
-            b.ToTable("horarios_aulas");
         });
 
         modelBuilder.Entity<Curso>(b =>

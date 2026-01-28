@@ -1,6 +1,6 @@
 using Portal_Aluno.Domain.Entities;
 
-namespace Portal_Aluno.Domain.Interfaces.Repositories;
+namespace Portal_Aluno.Domain.Interfaces;
 
 public interface ISalaRepository
 {

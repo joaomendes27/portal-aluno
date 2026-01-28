@@ -13,7 +13,12 @@ public class Turma
     public Professor Professor { get; set; } = null!;
     public string? Status { get; set; }
     public int? Capacidade { get; set; }
+    
+    public string? DiaSemana { get; set; }
+    public TimeOnly? HoraInicio { get; set; }
+    public TimeOnly? HoraFim { get; set; }
+    public int? SalaId { get; set; }
+    public Sala? Sala { get; set; }
 
     public List<MatriculaTurma> MatriculaTurmas { get; set; } = new();
-    public List<HorarioAula> HorariosAula { get; set; } = new();
 }

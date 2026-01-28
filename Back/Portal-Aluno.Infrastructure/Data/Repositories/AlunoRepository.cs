@@ -14,6 +14,11 @@ public class AlunoRepository : IAlunoRepository
         _context = context;
     }
 
+    public async Task<Aluno?> GetByIdAsync(int ra)
+    {
+        return await _context.Alunos.FirstOrDefaultAsync(a => a.Ra == ra);
+    }
+
     public async Task<Aluno?> GetByCpfOuEmailAsync(string cpf, string email)
     {
         return await _context.Alunos

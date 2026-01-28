@@ -1,3 +1,4 @@
+using Microsoft.EntityFrameworkCore;
 using Portal_Aluno.Domain.Entities;
 using Portal_Aluno.Domain.Interfaces;
 using Portal_Aluno.Infrastructure.Data.DbContexts;
@@ -21,5 +22,10 @@ public class CursoRepository : ICursoRepository
     public async Task<List<Curso>> GetAllAsync()
     {
         return await _context.Cursos.ToListAsync();
+    }
+
+    public async Task<Curso?> GetByIdAsync(int id)
+    {
+        return await _context.Cursos.FindAsync(id);
     }
 }

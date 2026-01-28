@@ -1,7 +1,7 @@
 using MediatR;
 using Portal_Aluno.Application.Features.SalaFeature.DTOs;
 
-namespace Features.SalaFeature.Commands.UpdateSala;
+namespace Portal_Aluno.Application.Features.SalaFeature.Commands.UpdateSala;
 
 public class UpdateSalaCommand : IRequest<SalaResponse>
 {

@@ -4,6 +4,7 @@ namespace Portal_Aluno.Domain.Interfaces;
 
 public interface IProfessorRepository
 {
+    Task<Professor?> GetByIdAsync(int id);
     Task<Professor?> GetByCpfAsync(string cpf);
     Task<Professor?> GetByEmailAsync(string email);
     Task AddAsync(Professor professor);

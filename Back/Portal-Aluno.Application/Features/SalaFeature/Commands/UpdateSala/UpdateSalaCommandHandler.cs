@@ -2,7 +2,7 @@ using MediatR;
 using Portal_Aluno.Domain.Interfaces;
 using Portal_Aluno.Application.Features.SalaFeature.DTOs;
 
-namespace Portal_Aluno.Application.Features.SalaFeature.Commands;
+namespace Portal_Aluno.Application.Features.SalaFeature.Commands.UpdateSala;
 
 public class UpdateSalaCommandHandler : IRequestHandler<UpdateSalaCommand, SalaResponse>
 {
@@ -20,7 +20,7 @@ public class UpdateSalaCommandHandler : IRequestHandler<UpdateSalaCommand, SalaR
         var sala = await _salaRepository.GetByIdAsync(request.Id);
         if (sala == null)
         {
-            throw new Exception("Sala não encontrada."); // Idealmente, uma exceção customizada
+            throw new Exception("Sala não encontrada.");
         }
 
         sala.Andar = request.Dto.Andar;

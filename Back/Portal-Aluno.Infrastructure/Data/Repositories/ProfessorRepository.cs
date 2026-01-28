@@ -14,6 +14,11 @@ public class ProfessorRepository : IProfessorRepository
         _context = context;
     }
 
+    public async Task<Professor?> GetByIdAsync(int id)
+    {
+        return await _context.Professores.FindAsync(id);
+    }
+
     public async Task<Professor?> GetByCpfAsync(string cpf)
     {
         return await _context.Professores.FirstOrDefaultAsync(p => p.Cpf == cpf);

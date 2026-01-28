@@ -1,0 +1,57 @@
+using MediatR;
+using Microsoft.AspNetCore.Mvc;
+using Portal_Aluno.Application.Features.TurmaFeature.Commands.CreateTurma;
+using Portal_Aluno.Application.Features.TurmaFeature.Commands.UpdateTurma;
+using Portal_Aluno.Application.Features.TurmaFeature.Commands.DeleteTurma;
+using Portal_Aluno.Application.Features.TurmaFeature.DTOs;
+using Portal_Aluno.Application.Features.TurmaFeature.Queries.GetAllTurmas;
+using Portal_Aluno.Application.Features.TurmaFeature.Queries.GetTurmaById;
+
+namespace Portal_Aluno.Controllers;
+
+[ApiController]
+[Route("api/[controller]")]
+public class TurmasController : ControllerBase
+{
+    private readonly IMediator _mediator;
+
+    public TurmasController(IMediator mediator)
+    {
+        _mediator = mediator;
+    }
+
+    [HttpGet]
+    public async Task<ActionResult<List<TurmaResponse>>> GetAllTurmas()
+    {
+        var result = await _mediator.Send(new GetAllTurmasQuery());
+        return Ok(result);
+    }
+
+    [HttpGet("{id}")]
+    public async Task<ActionResult<TurmaResponse>> GetTurmasById(int id)
+    {
+        var result = await _mediator.Send(new GetTurmaByIdQuery(id));
+        return Ok(result);
+    }
+
+    [HttpPost]
+    public async Task<ActionResult<TurmaResponse>> Create([FromBody] TurmaRequest request)
+    {
+        var result = await _mediator.Send(new CreateTurmaCommand(request));
+        return CreatedAtAction(nameof(GetTurmasById), new { id = result.Id }, result);
+    }
+
+    [HttpPut("{id}")]
+    public async Task<ActionResult<TurmaResponse>> UpdateTurma(int id, [FromBody] TurmaRequest request)
+    {
+        var result = await _mediator.Send(new UpdateTurmaCommand(id, request));
+        return Ok(result);
+    }
+
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> DeleteTurma(int id)
+    {
+        await _mediator.Send(new DeleteTurmaCommand(id));
+        return NoContent();
+    }
+}
