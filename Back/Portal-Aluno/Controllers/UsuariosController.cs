@@ -5,7 +5,10 @@ using Portal_Aluno.Application.Features.UsuarioFeature.Commands.CadastrarAluno;
 using Portal_Aluno.Application.Features.UsuarioFeature.Commands.CadastrarProfessor;
 using Portal_Aluno.Application.Features.UsuarioFeature.Commands.LoginUsuario;
 using Portal_Aluno.Application.Features.UsuarioFeature.DTOs;
+using Portal_Aluno.Domain.Entities;
 using Portal_Aluno.Domain.Interfaces;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace Portal_Aluno.Controllers;
 
@@ -84,5 +87,27 @@ public class UsuariosController : ControllerBase
         await _professorRepository.DesativarAsync(id);
         await _unitOfWork.SaveChangesAsync();
         return NoContent();
+    }
+
+    [HttpPost("EsqueciSenha")]
+    public async Task<IActionResult> EsqueciSenha([FromBody] EsqueciSenhaRequest request, [FromServices] IPasswordResetService passwordResetService)
+    {
+        try
+        {
+            await passwordResetService.GerarTokenEEnviarEmailAsync(request.Email);
+            return Ok("E-mail de redefinição enviado.");
+        }
+        catch (Exception ex)
+        {
+            return NotFound(ex.Message);
+        }
+    }
+
+    [HttpPost("RedefinirSenha")]
+    public async Task<IActionResult> RedefinirSenha([FromBody] RedefinirSenhaRequest request, [FromServices] IPasswordResetService passwordResetService)
+    {
+        var resultado = await passwordResetService.RedefinirSenhaAsync(request.Token, request.NovaSenha);
+        if (!resultado) return BadRequest("Token inválido ou expirado.");
+        return Ok("Senha redefinida com sucesso.");
     }
 }

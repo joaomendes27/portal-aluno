@@ -532,6 +532,22 @@
   },
   {
     "ContainingType": "Portal_Aluno.Controllers.UsuariosController",
+    "Method": "EsqueciSenha",
+    "RelativePath": "api/Usuarios/EsqueciSenha",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Portal_Aluno.Application.Features.UsuarioFeature.DTOs.EsqueciSenhaRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Portal_Aluno.Controllers.UsuariosController",
     "Method": "Login",
     "RelativePath": "api/Usuarios/Login",
     "HttpMethod": "POST",
@@ -541,6 +557,22 @@
       {
         "Name": "request",
         "Type": "Portal_Aluno.Application.Features.UsuarioFeature.DTOs.LoginRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Portal_Aluno.Controllers.UsuariosController",
+    "Method": "RedefinirSenha",
+    "RelativePath": "api/Usuarios/RedefinirSenha",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Portal_Aluno.Application.Features.UsuarioFeature.DTOs.RedefinirSenhaRequest",
         "IsRequired": true
       }
     ],

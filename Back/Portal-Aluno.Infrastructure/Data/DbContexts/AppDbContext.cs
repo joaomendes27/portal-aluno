@@ -17,6 +17,7 @@ public class AppDbContext : DbContext
     public DbSet<MatriculaTurma> MatriculasTurma => Set<MatriculaTurma>();
     public DbSet<Usuario> Usuarios => Set<Usuario>();
     public DbSet<Sala> Salas => Set<Sala>();
+    public DbSet<PasswordResetToken> PasswordResetTokens => Set<PasswordResetToken>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -103,6 +104,15 @@ public class AppDbContext : DbContext
 
             b.Ignore(x => x.Aluno);
             b.Ignore(x => x.Professor);
+        });
+
+        modelBuilder.Entity<PasswordResetToken>(b =>
+        {
+            b.ToTable("password_reset_tokens");
+            b.HasKey(x => x.Id);
+            b.Property(x => x.Email).IsRequired();
+            b.Property(x => x.Token).IsRequired();
+            b.Property(x => x.Expiracao).IsRequired();
         });
     }
 }

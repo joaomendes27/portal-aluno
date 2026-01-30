@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Portal_Aluno")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+031b6853ff7625792db0a678ab23367b3451fb42")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+633eee59dbad1fc40c9232018299eea5f41259ef")]
 [assembly: System.Reflection.AssemblyProductAttribute("Portal_Aluno")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Portal_Aluno")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
