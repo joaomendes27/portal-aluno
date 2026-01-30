@@ -9,7 +9,7 @@ public class Aluno
     public DateTime DataNascimento { get; set; }
     public string Cep { get; set; } = string.Empty;
     public string Rua { get; set; } = string.Empty;
-    public int Numero { get; set; }
+    public string Numero { get; set; } = string.Empty;
     public string Bairro { get; set; } = string.Empty;
     public string Cidade { get; set; } = string.Empty;
     public string Estado { get; set; } = string.Empty;

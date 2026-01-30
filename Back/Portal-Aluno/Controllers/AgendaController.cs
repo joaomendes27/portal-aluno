@@ -9,7 +9,7 @@ using System.Security.Claims;
 namespace Portal_Aluno.Controllers;
 
 [ApiController]
-[Route("api/[controller]")]
+[Route("api/[controller]/")]
 public class AgendaController : ControllerBase
 {
     private readonly IMediator _mediator;
@@ -20,7 +20,7 @@ public class AgendaController : ControllerBase
     }
 
     [Authorize(Roles = "aluno")]
-    [HttpGet("alunos/minha-agenda/hoje")]
+    [HttpGet("Alunos/Hoje")]
     public async Task<ActionResult<List<AgendaHojeResponse>>> GetAgendaHojeAluno()
     {
         var alunoIdStr = User.FindFirstValue(ClaimTypes.NameIdentifier);
@@ -31,7 +31,7 @@ public class AgendaController : ControllerBase
     }
 
     [Authorize(Roles = "professor")]
-    [HttpGet("professores/minha-agenda/hoje")]
+    [HttpGet("Professores/Hoje")]
     public async Task<ActionResult<List<AgendaHojeResponse>>> GetAgendaHojeProfessor()
     {
         var professorIdStr = User.FindFirstValue(ClaimTypes.NameIdentifier);

@@ -24,25 +24,6 @@ public class CadastrarCursoCommandHandler : IRequestHandler<CadastrarCursoComman
             CargaHoraria = request.Dto.CargaHoraria
         };
 
-        foreach (var disciplinaRequest in request.Dto.Disciplinas)
-        {
-            var disciplina = new Disciplina
-            {
-                Nome = disciplinaRequest.Nome,
-                CargaHoraria = disciplinaRequest.CargaHoraria,
-                LimiteFaltas = disciplinaRequest.LimiteFaltas
-            };
-
-            var cursoDisciplina = new CursoDisciplina
-            {
-                Curso = curso,
-                Disciplina = disciplina,
-                Semestre = disciplinaRequest.Semestre
-            };
-            
-            curso.CursoDisciplinas.Add(cursoDisciplina);
-        }
-
         await _cursoRepository.AddAsync(curso);
         await _unitOfWork.SaveChangesAsync(cancellationToken);
 

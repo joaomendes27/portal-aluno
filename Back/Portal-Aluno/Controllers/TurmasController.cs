@@ -10,7 +10,7 @@ using Portal_Aluno.Application.Features.TurmaFeature.Queries.GetTurmaById;
 namespace Portal_Aluno.Controllers;
 
 [ApiController]
-[Route("api/[controller]")]
+[Route("api/[controller]/")]
 public class TurmasController : ControllerBase
 {
     private readonly IMediator _mediator;
@@ -20,35 +20,35 @@ public class TurmasController : ControllerBase
         _mediator = mediator;
     }
 
-    [HttpGet]
+    [HttpGet("ListarTurmas")]
     public async Task<ActionResult<List<TurmaResponse>>> GetAllTurmas()
     {
         var result = await _mediator.Send(new GetAllTurmasQuery());
         return Ok(result);
     }
 
-    [HttpGet("{id}")]
+    [HttpGet("BuscarTurmaPorId/{id}")]
     public async Task<ActionResult<TurmaResponse>> GetTurmasById(int id)
     {
         var result = await _mediator.Send(new GetTurmaByIdQuery(id));
         return Ok(result);
     }
 
-    [HttpPost]
+    [HttpPost("CriarTurma")]
     public async Task<ActionResult<TurmaResponse>> Create([FromBody] TurmaRequest request)
     {
         var result = await _mediator.Send(new CreateTurmaCommand(request));
         return CreatedAtAction(nameof(GetTurmasById), new { id = result.Id }, result);
     }
 
-    [HttpPut("{id}")]
+    [HttpPut("AtualizarTurma")]
     public async Task<ActionResult<TurmaResponse>> UpdateTurma(int id, [FromBody] TurmaRequest request)
     {
         var result = await _mediator.Send(new UpdateTurmaCommand(id, request));
         return Ok(result);
     }
 
-    [HttpDelete("{id}")]
+    [HttpDelete("DeletarTurma/{id}")]
     public async Task<IActionResult> DeleteTurma(int id)
     {
         await _mediator.Send(new DeleteTurmaCommand(id));

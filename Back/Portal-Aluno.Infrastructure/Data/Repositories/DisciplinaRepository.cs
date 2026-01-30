@@ -16,6 +16,29 @@ public class DisciplinaRepository : IDisciplinaRepository
 
     public async Task<Disciplina?> GetByIdAsync(int id)
     {
-        return await _context.Disciplinas.FindAsync(id);
+        return await _context.Disciplinas
+            .Include(d => d.CursoDisciplinas)
+            .FirstOrDefaultAsync(d => d.Id == id);
+    }
+
+    public async Task<List<Disciplina>> GetAllAsync()
+    {
+        return await _context.Disciplinas
+            .Include(d => d.CursoDisciplinas)
+            .ToListAsync();
+    }
+
+    public async Task AddAsync(Disciplina disciplina)
+    {
+        await _context.Disciplinas.AddAsync(disciplina);
+    }
+
+    public async Task DeleteAsync(int id)
+    {
+        var disciplina = await _context.Disciplinas.FindAsync(id);
+        if (disciplina != null)
+        {
+            _context.Disciplinas.Remove(disciplina);
+        }
     }
 }

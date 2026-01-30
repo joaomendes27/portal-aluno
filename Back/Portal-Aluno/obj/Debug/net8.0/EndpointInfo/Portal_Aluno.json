@@ -5,7 +5,563 @@
     "version": "1.0"
   },
   "paths": {
-    "/api/Usuarios/cadastrar-aluno": {
+    "/api/Agenda/Alunos/Hoje": {
+      "get": {
+        "tags": [
+          "Agenda"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/AgendaHojeResponse"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/AgendaHojeResponse"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/AgendaHojeResponse"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Agenda/Professores/Hoje": {
+      "get": {
+        "tags": [
+          "Agenda"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/AgendaHojeResponse"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/AgendaHojeResponse"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/AgendaHojeResponse"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Cursos/ListarCursos": {
+      "get": {
+        "tags": [
+          "Cursos"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Cursos/CadastrarCurso": {
+      "post": {
+        "tags": [
+          "Cursos"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CadastrarCursoRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CadastrarCursoRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CadastrarCursoRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Cursos/BuscarCursoPorId/{id}": {
+      "get": {
+        "tags": [
+          "Cursos"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Salas/ListarSalas": {
+      "get": {
+        "tags": [
+          "Salas"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/SalaResponse"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/SalaResponse"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/SalaResponse"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Salas/BuscarSalaPorId/{id}": {
+      "get": {
+        "tags": [
+          "Salas"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/SalaResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SalaResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SalaResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Salas/CriarSala": {
+      "post": {
+        "tags": [
+          "Salas"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SalaRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SalaRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SalaRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/SalaResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SalaResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SalaResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Salas/AtualizarSala": {
+      "put": {
+        "tags": [
+          "Salas"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SalaRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SalaRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SalaRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/SalaResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SalaResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SalaResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Salas/DeletarSala/{id}": {
+      "delete": {
+        "tags": [
+          "Salas"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Turmas/ListarTurmas": {
+      "get": {
+        "tags": [
+          "Turmas"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TurmaResponse"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TurmaResponse"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TurmaResponse"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Turmas/BuscarTurmaPorId/{id}": {
+      "get": {
+        "tags": [
+          "Turmas"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/TurmaResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TurmaResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TurmaResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Turmas/CriarTurma": {
+      "post": {
+        "tags": [
+          "Turmas"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TurmaRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TurmaRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/TurmaRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/TurmaResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TurmaResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TurmaResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Turmas/AtualizarTurma": {
+      "put": {
+        "tags": [
+          "Turmas"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TurmaRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TurmaRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/TurmaRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/TurmaResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TurmaResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TurmaResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Turmas/DeletarTurma/{id}": {
+      "delete": {
+        "tags": [
+          "Turmas"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Usuarios/CadastrarAluno": {
       "post": {
         "tags": [
           "Usuarios"
@@ -36,7 +592,7 @@
         }
       }
     },
-    "/api/Usuarios/cadastrar-professor": {
+    "/api/Usuarios/CadastrarProfessor": {
       "post": {
         "tags": [
           "Usuarios"
@@ -67,7 +623,7 @@
         }
       }
     },
-    "/api/Usuarios/cadastrar-admin": {
+    "/api/Usuarios/CadastrarAdmin": {
       "post": {
         "tags": [
           "Usuarios"
@@ -98,7 +654,7 @@
         }
       }
     },
-    "/api/Usuarios/login": {
+    "/api/Usuarios/Login": {
       "post": {
         "tags": [
           "Usuarios"
@@ -132,6 +688,45 @@
   },
   "components": {
     "schemas": {
+      "AgendaHojeResponse": {
+        "type": "object",
+        "properties": {
+          "disciplina": {
+            "type": "string",
+            "nullable": true
+          },
+          "professor": {
+            "type": "string",
+            "nullable": true
+          },
+          "curso": {
+            "type": "string",
+            "nullable": true
+          },
+          "sala": {
+            "type": "string",
+            "nullable": true
+          },
+          "andar": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "diaSemana": {
+            "type": "string",
+            "nullable": true
+          },
+          "horaInicio": {
+            "type": "string",
+            "nullable": true
+          },
+          "horaFim": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "CadastrarAdminRequest": {
         "type": "object",
         "properties": {
@@ -167,7 +762,7 @@
           },
           "dataNascimento": {
             "type": "string",
-            "format": "date"
+            "format": "date-time"
           },
           "cep": {
             "type": "string",
@@ -212,6 +807,31 @@
         },
         "additionalProperties": false
       },
+      "CadastrarCursoRequest": {
+        "type": "object",
+        "properties": {
+          "nome": {
+            "type": "string",
+            "nullable": true
+          },
+          "grau": {
+            "type": "string",
+            "nullable": true
+          },
+          "cargaHoraria": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "disciplinas": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DisciplinaRequest"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "CadastrarProfessorRequest": {
         "type": "object",
         "properties": {
@@ -242,6 +862,28 @@
         },
         "additionalProperties": false
       },
+      "DisciplinaRequest": {
+        "type": "object",
+        "properties": {
+          "nome": {
+            "type": "string",
+            "nullable": true
+          },
+          "cargaHoraria": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "limiteFaltas": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "semestre": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
       "LoginRequest": {
         "type": "object",
         "properties": {
@@ -250,6 +892,168 @@
             "nullable": true
           },
           "senha": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SalaRequest": {
+        "type": "object",
+        "properties": {
+          "andar": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "numero": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SalaResponse": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "andar": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "numero": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "TurmaRequest": {
+        "type": "object",
+        "properties": {
+          "cursoId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "disciplinaId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "semestre": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "ano": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "professorId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "status": {
+            "type": "string",
+            "nullable": true
+          },
+          "capacidade": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "diaSemana": {
+            "type": "string",
+            "nullable": true
+          },
+          "horaInicio": {
+            "type": "string",
+            "nullable": true
+          },
+          "horaFim": {
+            "type": "string",
+            "nullable": true
+          },
+          "salaId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "TurmaResponse": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "cursoId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "cursoNome": {
+            "type": "string",
+            "nullable": true
+          },
+          "disciplinaId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "disciplinaNome": {
+            "type": "string",
+            "nullable": true
+          },
+          "semestre": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "ano": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "professorId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "professorNome": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "type": "string",
+            "nullable": true
+          },
+          "capacidade": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "diaSemana": {
+            "type": "string",
+            "nullable": true
+          },
+          "horaInicio": {
+            "type": "string",
+            "nullable": true
+          },
+          "horaFim": {
+            "type": "string",
+            "nullable": true
+          },
+          "salaId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "salaNumero": {
             "type": "string",
             "nullable": true
           }

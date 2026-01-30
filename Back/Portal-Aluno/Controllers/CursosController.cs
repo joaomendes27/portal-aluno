@@ -7,7 +7,7 @@ using Portal_Aluno.Domain.Interfaces;
 namespace Portal_Aluno.Controllers;
 
 [ApiController]
-[Route("api/[controller]")]
+[Route("api/[controller]/")]
 public class CursosController : ControllerBase
 {
     private readonly IMediator _mediator;
@@ -19,14 +19,14 @@ public class CursosController : ControllerBase
         _cursoRepository = cursoRepository;
     }
 
-    [HttpGet]
+    [HttpGet("ListarCursos")]
     public async Task<IActionResult> GetAllCursos()
     {
         var cursos = await _cursoRepository.GetAllAsync();
         return Ok(cursos);
     }
 
-    [HttpPost]
+    [HttpPost("CadastrarCurso")]
     public async Task<IActionResult> CadastrarCurso([FromBody] CadastrarCursoRequest request)
     {
         var command = new CadastrarCursoCommand(request);
@@ -34,7 +34,7 @@ public class CursosController : ControllerBase
         return CreatedAtAction(nameof(GetCursoById), new { id = cursoId }, request);
     }
 
-    [HttpGet("{id}")]
+    [HttpGet("BuscarCursoPorId/{id}")]
     public IActionResult GetCursoById(int id)
     {
         return Ok(new { Id = id, Message = "Endpoint de busca a ser implementado." });
