@@ -2,6 +2,7 @@ using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Portal_Aluno.Application.Features.CursoFeature.Commands;
 using Portal_Aluno.Application.Features.CursoFeature.DTOs;
+using Portal_Aluno.Application.Features.DisciplinaFeature.DTOs;
 using Portal_Aluno.Domain.Interfaces;
 
 namespace Portal_Aluno.Controllers;
@@ -35,8 +36,28 @@ public class CursosController : ControllerBase
     }
 
     [HttpGet("BuscarCursoPorId/{id}")]
-    public IActionResult GetCursoById(int id)
+    public async Task<IActionResult> GetCursoById(int id)
     {
-        return Ok(new { Id = id, Message = "Endpoint de busca a ser implementado." });
+        var curso = await _cursoRepository.GetByIdWithDisciplinasAsync(id);
+        if (curso == null) return NotFound();
+
+        var response = new CursoComDisciplinasResponse
+        {
+            Id = curso.Id,
+            Nome = curso.Nome,
+            Grau = curso.Grau,
+            CargaHoraria = curso.CargaHoraria,
+            Disciplinas = curso.CursoDisciplinas.Select(cd => new DisciplinaResponse
+            {
+                Id = cd.Disciplina.Id,
+                Nome = cd.Disciplina.Nome ?? string.Empty,
+                CargaHoraria = cd.Disciplina.CargaHoraria ?? 0,
+                LimiteFaltas = cd.Disciplina.LimiteFaltas ?? 0,
+                Semestre = cd.Semestre ?? 0,
+                CursoId = curso.Id
+            }).ToList()
+        };
+
+        return Ok(response);
     }
 }

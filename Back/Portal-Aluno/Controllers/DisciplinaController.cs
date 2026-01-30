@@ -1,6 +1,8 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using Portal_Aluno.Application.Features.DisciplinaFeature.Commands;
+using Features.DisciplinaFeature.Commands.DeleteDisciplina;
+using Features.DisciplinaFeature.Commands.CreateDisciplina;
+using Features.DisciplinaFeature.Commands.UpdateDisciplina;
 using Portal_Aluno.Application.Features.DisciplinaFeature.DTOs;
 using Portal_Aluno.Application.Features.DisciplinaFeature.Queries;
 

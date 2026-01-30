@@ -1,7 +1,7 @@
 using MediatR;
 using Portal_Aluno.Application.Features.DisciplinaFeature.DTOs;
 
-namespace Portal_Aluno.Application.Features.DisciplinaFeature.Commands;
+namespace Features.DisciplinaFeature.Commands.UpdateDisciplina;
 
 public class UpdateDisciplinaCommand : IRequest<Unit>
 {

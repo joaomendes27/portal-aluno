@@ -33,4 +33,13 @@ public class ProfessorRepository : IProfessorRepository
     {
         await _context.Professores.AddAsync(professor);
     }
+
+    public async Task DesativarAsync(int id)
+    {
+        var professor = await GetByIdAsync(id);
+        if (professor != null)
+        {
+            professor.Status = "desativado";
+        }
+    }
 }

@@ -73,11 +73,13 @@ public class AppDbContext : DbContext
 
             b.HasOne(cd => cd.Curso)
                 .WithMany(c => c.CursoDisciplinas)
-                .HasForeignKey(cd => cd.CursoId);
+                .HasForeignKey(cd => cd.CursoId)
+                .OnDelete(DeleteBehavior.Cascade);
 
             b.HasOne(cd => cd.Disciplina)
                 .WithMany(d => d.CursoDisciplinas)
-                .HasForeignKey(cd => cd.DisciplinaId);
+                .HasForeignKey(cd => cd.DisciplinaId)
+                .OnDelete(DeleteBehavior.Cascade);
         });
 
         modelBuilder.Entity<MatriculaTurma>(b =>

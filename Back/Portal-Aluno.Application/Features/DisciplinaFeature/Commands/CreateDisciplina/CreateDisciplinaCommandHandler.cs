@@ -3,7 +3,7 @@ using Portal_Aluno.Application.Features.DisciplinaFeature.DTOs;
 using Portal_Aluno.Domain.Entities;
 using Portal_Aluno.Domain.Interfaces;
 
-namespace Portal_Aluno.Application.Features.DisciplinaFeature.Commands;
+namespace Features.DisciplinaFeature.Commands.CreateDisciplina;
 
 public class CreateDisciplinaCommandHandler : IRequestHandler<CreateDisciplinaCommand, int>
 {

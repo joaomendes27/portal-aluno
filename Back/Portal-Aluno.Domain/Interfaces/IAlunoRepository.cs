@@ -8,4 +8,5 @@ public interface IAlunoRepository
     Task<Aluno?> GetByCpfAsync(string cpf);
     Task<Aluno?> GetByEmailAsync(string email);
     Task AddAsync(Aluno aluno);
+    Task DesativarAsync(int ra);
 }

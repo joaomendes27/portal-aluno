@@ -28,4 +28,12 @@ public class CursoRepository : ICursoRepository
     {
         return await _context.Cursos.FindAsync(id);
     }
+
+    public async Task<Curso?> GetByIdWithDisciplinasAsync(int id)
+    {
+        return await _context.Cursos
+            .Include(c => c.CursoDisciplinas)
+                .ThenInclude(cd => cd.Disciplina)
+            .FirstOrDefaultAsync(c => c.Id == id);
+    }
 }

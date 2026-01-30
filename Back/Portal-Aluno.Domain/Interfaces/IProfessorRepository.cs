@@ -8,4 +8,5 @@ public interface IProfessorRepository
     Task<Professor?> GetByCpfAsync(string cpf);
     Task<Professor?> GetByEmailAsync(string email);
     Task AddAsync(Professor professor);
+    Task DesativarAsync(int id);
 }

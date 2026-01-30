@@ -82,6 +82,105 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Portal_Aluno.Controllers.DisciplinaController",
+    "Method": "AtualizarDisciplina",
+    "RelativePath": "api/Disciplina/AtualizarDisciplina/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "Portal_Aluno.Application.Features.DisciplinaFeature.DTOs.DisciplinaRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Portal_Aluno.Controllers.DisciplinaController",
+    "Method": "BuscarDisciplinaPorId",
+    "RelativePath": "api/Disciplina/BuscarDisciplinaPorId/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Portal_Aluno.Application.Features.DisciplinaFeature.DTOs.DisciplinaResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Portal_Aluno.Controllers.DisciplinaController",
+    "Method": "CadastrarDisciplina",
+    "RelativePath": "api/Disciplina/CadastrarDisciplina",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Portal_Aluno.Application.Features.DisciplinaFeature.DTOs.DisciplinaRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Portal_Aluno.Controllers.DisciplinaController",
+    "Method": "DeletarDisciplina",
+    "RelativePath": "api/Disciplina/DeletarDisciplina/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Portal_Aluno.Controllers.DisciplinaController",
+    "Method": "ListarDisciplinas",
+    "RelativePath": "api/Disciplina/ListarDisciplinas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Portal_Aluno.Application.Features.DisciplinaFeature.DTOs.DisciplinaResponse, Portal_Aluno.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "Portal_Aluno.Controllers.SalasController",
     "Method": "UpdateSala",
     "RelativePath": "api/Salas/AtualizarSala",
@@ -321,6 +420,38 @@
   },
   {
     "ContainingType": "Portal_Aluno.Controllers.UsuariosController",
+    "Method": "BuscarAlunoPorId",
+    "RelativePath": "api/Usuarios/BuscarAlunoPorId/{ra}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ra",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Portal_Aluno.Controllers.UsuariosController",
+    "Method": "BuscarProfessorPorId",
+    "RelativePath": "api/Usuarios/BuscarProfessorPorId/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Portal_Aluno.Controllers.UsuariosController",
     "Method": "CadastrarAdmin",
     "RelativePath": "api/Usuarios/CadastrarAdmin",
     "HttpMethod": "POST",
@@ -362,6 +493,38 @@
       {
         "Name": "request",
         "Type": "Portal_Aluno.Application.Features.UsuarioFeature.DTOs.CadastrarProfessorRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Portal_Aluno.Controllers.UsuariosController",
+    "Method": "DesativarAluno",
+    "RelativePath": "api/Usuarios/DesativarAluno/{ra}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ra",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Portal_Aluno.Controllers.UsuariosController",
+    "Method": "DesativarProfessor",
+    "RelativePath": "api/Usuarios/DesativarProfessor/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
         "IsRequired": true
       }
     ],

@@ -1,6 +1,6 @@
 using MediatR;
 
-namespace Portal_Aluno.Application.Features.DisciplinaFeature.Commands;
+namespace Features.DisciplinaFeature.Commands.DeleteDisciplina;
 
 public class DeleteDisciplinaCommand : IRequest<Unit>
 {

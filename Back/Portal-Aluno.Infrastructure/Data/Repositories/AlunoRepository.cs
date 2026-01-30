@@ -44,4 +44,13 @@ public class AlunoRepository : IAlunoRepository
     {
         return await _context.Alunos.AnyAsync(a => a.Ra == ra);
     }
+
+    public async Task DesativarAsync(int ra)
+    {
+        var aluno = await GetByIdAsync(ra);
+        if (aluno != null)
+        {
+            aluno.Status = "desativado";
+        }
+    }
 }
