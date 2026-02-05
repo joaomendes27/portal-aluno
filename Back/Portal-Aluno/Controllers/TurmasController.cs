@@ -1,4 +1,5 @@
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Portal_Aluno.Application.Features.TurmaFeature.Commands.CreateTurma;
 using Portal_Aluno.Application.Features.TurmaFeature.Commands.UpdateTurma;
@@ -11,6 +12,7 @@ namespace Portal_Aluno.Controllers;
 
 [ApiController]
 [Route("api/[controller]/")]
+[Authorize]
 public class TurmasController : ControllerBase
 {
     private readonly IMediator _mediator;

@@ -1,8 +1,8 @@
 {
   "openapi": "3.0.1",
   "info": {
-    "title": "Portal_Aluno",
-    "version": "1.0"
+    "title": "Portal Aluno API",
+    "version": "v1"
   },
   "paths": {
     "/api/Agenda/Alunos/Hoje": {
@@ -1439,6 +1439,19 @@
         },
         "additionalProperties": false
       }
+    },
+    "securitySchemes": {
+      "Bearer": {
+        "type": "http",
+        "description": "Insira o token JWT (Sem o Bearer)",
+        "scheme": "Bearer",
+        "bearerFormat": "JWT"
+      }
     }
-  }
+  },
+  "security": [
+    {
+      "Bearer": [ ]
+    }
+  ]
 }

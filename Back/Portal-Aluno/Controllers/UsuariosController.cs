@@ -1,4 +1,5 @@
-using MediatR; 
+using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Portal_Aluno.Application.Features.UsuarioFeature.Commands.CadastrarAdmin;
 using Portal_Aluno.Application.Features.UsuarioFeature.Commands.CadastrarAluno;
@@ -30,6 +31,7 @@ public class UsuariosController : ControllerBase
     }
 
     [HttpPost("CadastrarAluno")]
+    [AllowAnonymous]
     public async Task<IActionResult> CadastrarAluno([FromBody] CadastrarAlunoRequest request)
     {
         await _mediator.Send(new CadastrarAlunoCommand(request));
@@ -37,6 +39,7 @@ public class UsuariosController : ControllerBase
     }
 
     [HttpPost("CadastrarProfessor")]
+    [AllowAnonymous]
     public async Task<IActionResult> CadastrarProfessor([FromBody] CadastrarProfessorRequest request)
     {
         await _mediator.Send(new CadastrarProfessorCommand(request));
@@ -44,6 +47,7 @@ public class UsuariosController : ControllerBase
     }
 
     [HttpPost("CadastrarAdmin")]
+    [AllowAnonymous]
     public async Task<IActionResult> CadastrarAdmin([FromBody] CadastrarAdminRequest request)
     {
         await _mediator.Send(new CadastrarAdminCommand(request));
@@ -51,6 +55,7 @@ public class UsuariosController : ControllerBase
     }
 
     [HttpPost("Login")]
+    [AllowAnonymous]
     public async Task<IActionResult> Login([FromBody] LoginRequest request)
     {
         var response = await _mediator.Send(new LoginUsuarioCommand(request));
@@ -58,6 +63,7 @@ public class UsuariosController : ControllerBase
     }
 
     [HttpGet("BuscarAlunoPorId/{ra}")]
+    [Authorize]
     public async Task<IActionResult> BuscarAlunoPorId(int ra)
     {
         var aluno = await _alunoRepository.GetByIdAsync(ra);
@@ -66,6 +72,7 @@ public class UsuariosController : ControllerBase
     }
 
     [HttpGet("BuscarProfessorPorId/{id}")]
+    [Authorize]
     public async Task<IActionResult> BuscarProfessorPorId(int id)
     {
         var professor = await _professorRepository.GetByIdAsync(id);
@@ -74,6 +81,7 @@ public class UsuariosController : ControllerBase
     }
 
     [HttpDelete("DesativarAluno/{ra}")]
+    [Authorize]
     public async Task<IActionResult> DesativarAluno(int ra)
     {
         await _alunoRepository.DesativarAsync(ra);
@@ -82,6 +90,7 @@ public class UsuariosController : ControllerBase
     }
 
     [HttpDelete("DesativarProfessor/{id}")]
+    [Authorize]
     public async Task<IActionResult> DesativarProfessor(int id)
     {
         await _professorRepository.DesativarAsync(id);
@@ -90,6 +99,7 @@ public class UsuariosController : ControllerBase
     }
 
     [HttpPost("EsqueciSenha")]
+    [AllowAnonymous]
     public async Task<IActionResult> EsqueciSenha([FromBody] EsqueciSenhaRequest request, [FromServices] IPasswordResetService passwordResetService)
     {
         try
@@ -104,6 +114,7 @@ public class UsuariosController : ControllerBase
     }
 
     [HttpPost("RedefinirSenha")]
+    [AllowAnonymous]
     public async Task<IActionResult> RedefinirSenha([FromBody] RedefinirSenhaRequest request, [FromServices] IPasswordResetService passwordResetService)
     {
         var resultado = await passwordResetService.RedefinirSenhaAsync(request.Token, request.NovaSenha);

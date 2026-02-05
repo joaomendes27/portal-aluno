@@ -1,4 +1,5 @@
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Portal_Aluno.Application.Features.CursoFeature.Commands;
 using Portal_Aluno.Application.Features.CursoFeature.DTOs;
@@ -9,6 +10,7 @@ namespace Portal_Aluno.Controllers;
 
 [ApiController]
 [Route("api/[controller]/")]
+[Authorize]
 public class CursosController : ControllerBase
 {
     private readonly IMediator _mediator;

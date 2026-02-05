@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Features.DisciplinaFeature.Commands.DeleteDisciplina;
 using Features.DisciplinaFeature.Commands.CreateDisciplina;
@@ -10,6 +11,7 @@ namespace Portal_Aluno.Controllers;
 
 [ApiController]
 [Route("api/[controller]/")]
+[Authorize]
 public class DisciplinaController : ControllerBase
 {
     private readonly IMediator _mediator;

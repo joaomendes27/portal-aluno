@@ -1,4 +1,5 @@
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Portal_Aluno.Application.Features.SalaFeature.DTOs;
 using Portal_Aluno.Application.Features.SalaFeature.Queries;
@@ -12,6 +13,7 @@ namespace Portal_Aluno.Controllers;
 
 [ApiController]
 [Route("api/[controller]/")]
+[Authorize]
 public class SalasController : ControllerBase
 {
     private readonly IMediator _mediator;
