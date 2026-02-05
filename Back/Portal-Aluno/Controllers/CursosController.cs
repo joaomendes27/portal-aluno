@@ -28,7 +28,16 @@ public class CursosController : ControllerBase
     public async Task<IActionResult> GetAllCursos()
     {
         var cursos = await _cursoRepository.GetAllAsync();
-        return Ok(cursos);
+        
+        var response = cursos.Select(c => new CursoResponse
+        {
+            Id = c.Id,
+            Nome = c.Nome,
+            Grau = c.Grau,
+            CargaHoraria = c.CargaHoraria
+        }).ToList();
+
+        return Ok(response);
     }
 
     [HttpPost("CadastrarCurso")]

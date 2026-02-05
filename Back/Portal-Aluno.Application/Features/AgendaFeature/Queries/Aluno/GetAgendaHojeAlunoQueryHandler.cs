@@ -35,8 +35,8 @@ public class GetAgendaHojeAlunoQueryHandler : IRequestHandler<GetAgendaHojeAluno
                 t.Sala?.Numero ?? "",
                 t.Sala?.Andar,
                 t.DiaSemana,
-                t.HoraInicio?.ToString("HH:mm"),
-                t.HoraFim?.ToString("HH:mm")
+                t.HoraAulaInicio?.ToString("HH:mm"),
+                t.HoraAulaFim?.ToString("HH:mm")
             ))
             .ToList();
 

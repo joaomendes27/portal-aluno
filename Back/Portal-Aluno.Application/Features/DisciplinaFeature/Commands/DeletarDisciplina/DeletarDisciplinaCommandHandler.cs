@@ -6,18 +6,32 @@ namespace Features.DisciplinaFeature.Commands.DeleteDisciplina;
 public class DeletarDisciplinaCommandHandler : IRequestHandler<DeletarDisciplinaCommand, Unit>
 {
     private readonly IDisciplinaRepository _disciplinaRepository;
+    private readonly ICursoDisciplinaRepository _cursoDisciplinaRepository;
     private readonly IUnitOfWork _unitOfWork;
 
-    public DeletarDisciplinaCommandHandler(IDisciplinaRepository disciplinaRepository, IUnitOfWork unitOfWork)
+    public DeletarDisciplinaCommandHandler(
+        IDisciplinaRepository disciplinaRepository,
+        ICursoDisciplinaRepository cursoDisciplinaRepository,
+        IUnitOfWork unitOfWork)
     {
         _disciplinaRepository = disciplinaRepository;
+        _cursoDisciplinaRepository = cursoDisciplinaRepository;
         _unitOfWork = unitOfWork;
     }
 
     public async Task<Unit> Handle(DeletarDisciplinaCommand request, CancellationToken cancellationToken)
     {
+        // Primeiro remove os vínculos com cursos
+        var vinculos = await _cursoDisciplinaRepository.GetByDisciplinaIdAsync(request.Id);
+        if (vinculos.Any())
+        {
+            _cursoDisciplinaRepository.DeleteRange(vinculos);
+        }
+
+        // Depois deleta a disciplina
         await _disciplinaRepository.DeleteAsync(request.Id);
         await _unitOfWork.SaveChangesAsync(cancellationToken);
+        
         return Unit.Value;
     }
 }

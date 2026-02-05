@@ -3,7 +3,7 @@ namespace Portal_Aluno.Domain.Entities;
 public class Matricula
 {
     public int Id { get; set; }
-    public int AlunoRa { get; set; }
+    public int Ra { get; set; }
     public Aluno Aluno { get; set; } = null!;
     public int CursoId { get; set; }
     public Curso Curso { get; set; } = null!;

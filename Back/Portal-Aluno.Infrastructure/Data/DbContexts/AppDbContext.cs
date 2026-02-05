@@ -27,7 +27,7 @@ public class AppDbContext : DbContext
             b.Property(x => x.Ra).ValueGeneratedOnAdd();
             b.HasOne(a => a.Matricula)
                 .WithOne(m => m.Aluno)
-                .HasForeignKey<Matricula>(m => m.AlunoRa);
+                .HasForeignKey<Matricula>(m => m.Ra);
         });
 
         modelBuilder.Entity<Professor>(b =>
@@ -86,7 +86,7 @@ public class AppDbContext : DbContext
         modelBuilder.Entity<MatriculaTurma>(b =>
         {
             b.ToTable("matricula_turma");
-            b.HasKey(mt => new { mt.MatriculaId, mt.TurmaId });
+            b.HasKey(mt => mt.Id);
             b.Property(x => x.Nota).HasPrecision(4, 2);
 
             b.HasOne(mt => mt.Matricula)

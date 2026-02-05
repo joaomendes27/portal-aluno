@@ -37,8 +37,8 @@ public class CriarTurmaCommandHandler : IRequestHandler<CriarTurmaCommand, Turma
             Status = request.Dto.Status,
             Capacidade = request.Dto.Capacidade,
             DiaSemana = request.Dto.DiaSemana,
-            HoraInicio = request.Dto.HoraInicio != null ? TimeOnly.Parse(request.Dto.HoraInicio) : null,
-            HoraFim = request.Dto.HoraFim != null ? TimeOnly.Parse(request.Dto.HoraFim) : null,
+            HoraAulaInicio = request.Dto.HoraInicio != null ? TimeOnly.Parse(request.Dto.HoraInicio) : null,
+            HoraAulaFim = request.Dto.HoraFim != null ? TimeOnly.Parse(request.Dto.HoraFim) : null,
             SalaId = request.Dto.SalaId
         };
 
@@ -63,8 +63,8 @@ public class CriarTurmaCommandHandler : IRequestHandler<CriarTurmaCommand, Turma
             turma.Status,
             turma.Capacidade,
             turma.DiaSemana,
-            turma.HoraInicio?.ToString("HH:mm"),
-            turma.HoraFim?.ToString("HH:mm"),
+            turma.HoraAulaInicio?.ToString("HH:mm"),
+            turma.HoraAulaFim?.ToString("HH:mm"),
             turma.SalaId,
             sala?.Numero ?? "N/A"
         );

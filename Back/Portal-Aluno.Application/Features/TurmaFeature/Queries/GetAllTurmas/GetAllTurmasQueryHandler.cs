@@ -29,8 +29,8 @@ public class GetAllTurmasQueryHandler : IRequestHandler<GetAllTurmasQuery, List<
             t.Status,
             t.Capacidade,
             t.DiaSemana,
-            t.HoraInicio?.ToString("HH:mm"),
-            t.HoraFim?.ToString("HH:mm"),
+            t.HoraAulaInicio?.ToString("HH:mm"),
+            t.HoraAulaFim?.ToString("HH:mm"),
             t.SalaId,
             t.Sala?.Numero ?? ""
         )).ToList();

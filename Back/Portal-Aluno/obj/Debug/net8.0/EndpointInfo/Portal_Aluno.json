@@ -212,7 +212,7 @@
         }
       }
     },
-    "/api/Disciplina/CadastrarDisciplina": {
+    "/api/Disciplina/CadastrarDisciplinas": {
       "post": {
         "tags": [
           "Disciplina"
@@ -221,17 +221,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/DisciplinaRequest"
+                "$ref": "#/components/schemas/CadastrarDisciplinasRequest"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/DisciplinaRequest"
+                "$ref": "#/components/schemas/CadastrarDisciplinasRequest"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/DisciplinaRequest"
+                "$ref": "#/components/schemas/CadastrarDisciplinasRequest"
               }
             }
           }
@@ -382,6 +382,126 @@
                 }
               }
             }
+          }
+        }
+      }
+    },
+    "/api/Matriculas/MatricularAluno": {
+      "post": {
+        "tags": [
+          "Matriculas"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MatricularAlunoRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MatricularAlunoRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/MatricularAlunoRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Matriculas/InscreverEmTurma": {
+      "post": {
+        "tags": [
+          "Matriculas"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/InscreverEmTurmaRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/InscreverEmTurmaRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/InscreverEmTurmaRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Matriculas/BuscarMatriculaPorId/{id}": {
+      "get": {
+        "tags": [
+          "Matriculas"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Matriculas/BuscarMatriculaPorAluno/{ra}": {
+      "get": {
+        "tags": [
+          "Matriculas"
+        ],
+        "parameters": [
+          {
+            "name": "ra",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Matriculas/ListarMatriculas": {
+      "get": {
+        "tags": [
+          "Matriculas"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
           }
         }
       }
@@ -1236,6 +1356,23 @@
         },
         "additionalProperties": false
       },
+      "CadastrarDisciplinasRequest": {
+        "type": "object",
+        "properties": {
+          "cursoId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "disciplinas": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DisciplinaItem"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "CadastrarProfessorRequest": {
         "type": "object",
         "properties": {
@@ -1262,6 +1399,28 @@
           "foto": {
             "type": "string",
             "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "DisciplinaItem": {
+        "type": "object",
+        "properties": {
+          "nome": {
+            "type": "string",
+            "nullable": true
+          },
+          "cargaHoraria": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "limiteFaltas": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "semestre": {
+            "type": "integer",
+            "format": "int32"
           }
         },
         "additionalProperties": false
@@ -1332,6 +1491,20 @@
         },
         "additionalProperties": false
       },
+      "InscreverEmTurmaRequest": {
+        "type": "object",
+        "properties": {
+          "matriculaId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "turmaId": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
       "LoginRequest": {
         "type": "object",
         "properties": {
@@ -1340,6 +1513,32 @@
             "nullable": true
           },
           "senha": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "MatricularAlunoRequest": {
+        "type": "object",
+        "properties": {
+          "alunoRa": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "cursoId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "semestre": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "turno": {
+            "type": "string",
+            "nullable": true
+          },
+          "formaIngresso": {
             "type": "string",
             "nullable": true
           }

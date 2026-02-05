@@ -21,4 +21,7 @@
 	  <ProjectReference Include="..\Portal-Aluno.Domain\Portal_Aluno.Domain.csproj" />
 	  <ProjectReference Include="..\Portal-Aluno.Infrastructure\Portal_Aluno.Infrastructure.csproj" />
 	</ItemGroup>
+	<ItemGroup>
+	  <Folder Include="Features\DisciplinaFeature\Commands\CriarDisciplina\" />
+	</ItemGroup>
 </Project>

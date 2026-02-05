@@ -167,15 +167,15 @@
   },
   {
     "ContainingType": "Portal_Aluno.Controllers.DisciplinaController",
-    "Method": "CadastrarDisciplina",
-    "RelativePath": "api/Disciplina/CadastrarDisciplina",
+    "Method": "CadastrarDisciplinas",
+    "RelativePath": "api/Disciplina/CadastrarDisciplinas",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "request",
-        "Type": "Portal_Aluno.Application.Features.DisciplinaFeature.DTOs.DisciplinaRequest",
+        "Type": "Portal_Aluno.Application.Features.DisciplinaFeature.DTOs.CadastrarDisciplinasRequest",
         "IsRequired": true
       }
     ],
@@ -216,6 +216,80 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "Portal_Aluno.Controllers.MatriculasController",
+    "Method": "GetMatriculaPorAluno",
+    "RelativePath": "api/Matriculas/BuscarMatriculaPorAluno/{ra}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ra",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Portal_Aluno.Controllers.MatriculasController",
+    "Method": "GetMatriculaPorId",
+    "RelativePath": "api/Matriculas/BuscarMatriculaPorId/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Portal_Aluno.Controllers.MatriculasController",
+    "Method": "InscreverEmTurma",
+    "RelativePath": "api/Matriculas/InscreverEmTurma",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Portal_Aluno.Application.Features.MatriculaFeature.DTOs.InscreverEmTurmaRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Portal_Aluno.Controllers.MatriculasController",
+    "Method": "GetAllMatriculas",
+    "RelativePath": "api/Matriculas/ListarMatriculas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Portal_Aluno.Controllers.MatriculasController",
+    "Method": "MatricularAluno",
+    "RelativePath": "api/Matriculas/MatricularAluno",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Portal_Aluno.Application.Features.MatriculaFeature.DTOs.MatricularAlunoRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   },
   {
     "ContainingType": "Portal_Aluno.Controllers.SalasController",

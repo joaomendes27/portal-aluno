@@ -37,8 +37,8 @@ public class AtualizarTurmaCommandHandler : IRequestHandler<AtualizarTurmaComman
         turma.Status = request.Dto.Status;
         turma.Capacidade = request.Dto.Capacidade;
         turma.DiaSemana = request.Dto.DiaSemana;
-        turma.HoraInicio = request.Dto.HoraInicio != null ? TimeOnly.Parse(request.Dto.HoraInicio) : null;
-        turma.HoraFim = request.Dto.HoraFim != null ? TimeOnly.Parse(request.Dto.HoraFim) : null;
+        turma.HoraAulaInicio = request.Dto.HoraInicio != null ? TimeOnly.Parse(request.Dto.HoraInicio) : null;
+        turma.HoraAulaFim = request.Dto.HoraFim != null ? TimeOnly.Parse(request.Dto.HoraFim) : null;
         turma.SalaId = request.Dto.SalaId;
 
         _turmaRepository.Update(turma);
@@ -62,8 +62,8 @@ public class AtualizarTurmaCommandHandler : IRequestHandler<AtualizarTurmaComman
             turma.Status,
             turma.Capacidade,
             turma.DiaSemana,
-            turma.HoraInicio?.ToString("HH:mm"),
-            turma.HoraFim?.ToString("HH:mm"),
+            turma.HoraAulaInicio?.ToString("HH:mm"),
+            turma.HoraAulaFim?.ToString("HH:mm"),
             turma.SalaId,
             sala?.Numero ?? "N/A"
         );

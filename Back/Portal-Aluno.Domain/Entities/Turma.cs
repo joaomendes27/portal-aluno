@@ -15,8 +15,8 @@ public class Turma
     public int? Capacidade { get; set; }
     
     public string? DiaSemana { get; set; }
-    public TimeOnly? HoraInicio { get; set; }
-    public TimeOnly? HoraFim { get; set; }
+    public TimeOnly? HoraAulaInicio { get; set; }
+    public TimeOnly? HoraAulaFim { get; set; }
     public int? SalaId { get; set; }
     public Sala? Sala { get; set; }
 

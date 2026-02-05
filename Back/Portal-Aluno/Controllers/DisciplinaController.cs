@@ -2,8 +2,8 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Features.DisciplinaFeature.Commands.DeleteDisciplina;
-using Features.DisciplinaFeature.Commands.CreateDisciplina;
 using Features.DisciplinaFeature.Commands.UpdateDisciplina;
+using Portal_Aluno.Application.Features.DisciplinaFeature.Commands.CadastrarDisciplinas;
 using Portal_Aluno.Application.Features.DisciplinaFeature.DTOs;
 using Portal_Aluno.Application.Features.DisciplinaFeature.Queries;
 
@@ -21,11 +21,11 @@ public class DisciplinaController : ControllerBase
         _mediator = mediator;
     }
 
-    [HttpPost("CadastrarDisciplina")]
-    public async Task<IActionResult> CadastrarDisciplina([FromBody] DisciplinaRequest request)
+    [HttpPost("CadastrarDisciplinas")]
+    public async Task<IActionResult> CadastrarDisciplinas([FromBody] CadastrarDisciplinasRequest request)
     {
-        var id = await _mediator.Send(new CriarDisciplinaCommand(request));
-        return CreatedAtAction(nameof(BuscarDisciplinaPorId), new { id }, request);
+        var ids = await _mediator.Send(new CadastrarDisciplinasCommand(request));
+        return Ok(new { Message = "Disciplinas cadastradas com sucesso.", DisciplinaIds = ids });
     }
 
     [HttpPut("AtualizarDisciplina/{id}")]
