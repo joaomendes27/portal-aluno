@@ -25,8 +25,8 @@ public class MatriculasController : ControllerBase
     [HttpPost("MatricularAluno")]
     public async Task<IActionResult> MatricularAluno([FromBody] MatricularAlunoRequest request)
     {
-        var matriculaId = await _mediator.Send(new MatricularAlunoCommand(request));
-        return CreatedAtAction(nameof(GetMatriculaPorId), new { id = matriculaId }, request);
+        var response = await _mediator.Send(new MatricularAlunoCommand(request));
+        return Ok(response);
     }
 
     [HttpPost("InscreverEmTurma")]

@@ -7,6 +7,7 @@ public record TurmaRequest(
     int DisciplinaId,
     int? Semestre,
     int? Ano,
+    string? Turno,
     int ProfessorId,
     string? Status,
     int? Capacidade,

@@ -5,5 +5,6 @@ public record MatricularAlunoRequest(
     int CursoId,
     int Semestre,
     string Turno,
+    int Ano,
     string FormaIngresso
 );

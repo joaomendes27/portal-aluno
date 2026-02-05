@@ -9,6 +9,7 @@ public class Turma
     public Disciplina Disciplina { get; set; } = null!;
     public int? Semestre { get; set; }
     public int? Ano { get; set; }
+    public string? Turno { get; set; }
     public int ProfessorId { get; set; }
     public Professor Professor { get; set; } = null!;
     public string? Status { get; set; }

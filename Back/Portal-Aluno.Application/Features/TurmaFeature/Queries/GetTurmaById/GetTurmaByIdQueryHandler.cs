@@ -26,6 +26,7 @@ public class GetTurmaByIdQueryHandler : IRequestHandler<GetTurmaByIdQuery, Turma
             t.Disciplina?.Nome ?? "",
             t.Semestre,
             t.Ano,
+            t.Turno,
             t.ProfessorId,
             t.Professor?.Nome ?? "",
             t.Status,

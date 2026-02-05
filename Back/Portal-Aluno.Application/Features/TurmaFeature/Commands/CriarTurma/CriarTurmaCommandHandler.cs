@@ -2,7 +2,6 @@ using MediatR;
 using Portal_Aluno.Domain.Entities;
 using Portal_Aluno.Domain.Interfaces;
 using Portal_Aluno.Application.Features.TurmaFeature.DTOs;
-using System.Data;
 
 namespace Portal_Aluno.Application.Features.TurmaFeature.Commands.CreateTurma;
 
@@ -33,6 +32,7 @@ public class CriarTurmaCommandHandler : IRequestHandler<CriarTurmaCommand, Turma
             DisciplinaId = request.Dto.DisciplinaId,
             Semestre = request.Dto.Semestre,
             Ano = request.Dto.Ano,
+            Turno = request.Dto.Turno,
             ProfessorId = request.Dto.ProfessorId,
             Status = request.Dto.Status,
             Capacidade = request.Dto.Capacidade,
@@ -58,6 +58,7 @@ public class CriarTurmaCommandHandler : IRequestHandler<CriarTurmaCommand, Turma
             disciplina?.Nome ?? "N/A",
             turma.Semestre,
             turma.Ano,
+            turma.Turno,
             turma.ProfessorId,
             professor?.Nome ?? "N/A",
             turma.Status,

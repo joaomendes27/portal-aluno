@@ -35,6 +35,11 @@ public class AlunoRepository : IAlunoRepository
         return await _context.Alunos.FirstOrDefaultAsync(a => a.Email == email);
     }
 
+    public async Task<List<Aluno>> GetAllAsync()
+    {
+        return await _context.Alunos.Where(a => a.Status == "Ativo").ToListAsync();
+    }
+
     public async Task AddAsync(Aluno aluno)
     {
         await _context.Alunos.AddAsync(aluno);

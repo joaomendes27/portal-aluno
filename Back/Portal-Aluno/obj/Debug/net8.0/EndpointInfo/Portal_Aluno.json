@@ -81,6 +81,64 @@
         }
       }
     },
+    "/api/Alunos/BuscarPorRa/{ra}": {
+      "get": {
+        "tags": [
+          "Alunos"
+        ],
+        "parameters": [
+          {
+            "name": "ra",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Alunos/Listar": {
+      "get": {
+        "tags": [
+          "Alunos"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Alunos/Desativar/{ra}": {
+      "delete": {
+        "tags": [
+          "Alunos"
+        ],
+        "parameters": [
+          {
+            "name": "ra",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Cursos/ListarCursos": {
       "get": {
         "tags": [
@@ -498,6 +556,64 @@
       "get": {
         "tags": [
           "Matriculas"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Professores/BuscarPorId/{id}": {
+      "get": {
+        "tags": [
+          "Professores"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Professores/Listar": {
+      "get": {
+        "tags": [
+          "Professores"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Professores/Desativar/{id}": {
+      "delete": {
+        "tags": [
+          "Professores"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
         ],
         "responses": {
           "200": {
@@ -1044,98 +1160,6 @@
         }
       }
     },
-    "/api/Usuarios/BuscarAlunoPorId/{ra}": {
-      "get": {
-        "tags": [
-          "Usuarios"
-        ],
-        "parameters": [
-          {
-            "name": "ra",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/Usuarios/BuscarProfessorPorId/{id}": {
-      "get": {
-        "tags": [
-          "Usuarios"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/Usuarios/DesativarAluno/{ra}": {
-      "delete": {
-        "tags": [
-          "Usuarios"
-        ],
-        "parameters": [
-          {
-            "name": "ra",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/Usuarios/DesativarProfessor/{id}": {
-      "delete": {
-        "tags": [
-          "Usuarios"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
     "/api/Usuarios/EsqueciSenha": {
       "post": {
         "tags": [
@@ -1538,6 +1562,10 @@
             "type": "string",
             "nullable": true
           },
+          "ano": {
+            "type": "integer",
+            "format": "int32"
+          },
           "formaIngresso": {
             "type": "string",
             "nullable": true
@@ -1614,6 +1642,10 @@
             "format": "int32",
             "nullable": true
           },
+          "turno": {
+            "type": "string",
+            "nullable": true
+          },
           "professorId": {
             "type": "integer",
             "format": "int32"
@@ -1678,6 +1710,10 @@
           "ano": {
             "type": "integer",
             "format": "int32",
+            "nullable": true
+          },
+          "turno": {
+            "type": "string",
             "nullable": true
           },
           "professorId": {

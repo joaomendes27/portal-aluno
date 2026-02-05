@@ -1,5 +1,3 @@
-using System.Collections.Generic;
-
 namespace Portal_Aluno.Application.Features.TurmaFeature.DTOs;
 
 public record TurmaResponse(
@@ -10,6 +8,7 @@ public record TurmaResponse(
     string DisciplinaNome,
     int? Semestre,
     int? Ano,
+    string? Turno,
     int ProfessorId,
     string ProfessorNome,
     string? Status,

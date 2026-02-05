@@ -3,7 +3,7 @@ using Portal_Aluno.Application.Features.MatriculaFeature.DTOs;
 
 namespace Portal_Aluno.Application.Features.MatriculaFeature.Commands.MatricularAluno;
 
-public class MatricularAlunoCommand : IRequest<int>
+public class MatricularAlunoCommand : IRequest<MatricularAlunoResponse>
 {
     public MatricularAlunoRequest Dto { get; }
 

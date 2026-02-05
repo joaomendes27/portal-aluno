@@ -48,4 +48,25 @@ public class TurmaRepository : ITurmaRepository
     {
         _context.Turmas.Remove(turma);
     }
+
+    public async Task<List<Turma>> GetTurmasDisponiveisAsync(int cursoId, int semestre, string turno, int ano)
+    {
+        return await _context.Turmas
+            .Include(t => t.Disciplina)
+            .Include(t => t.Professor)
+            .Include(t => t.Sala)
+            .Include(t => t.MatriculaTurmas)
+            .Where(t => t.CursoId == cursoId
+                     && t.Semestre == semestre
+                     && t.Turno == turno
+                     && t.Ano == ano
+                     && t.Status == "Ativa")
+            .ToListAsync();
+    }
+
+    public async Task<int> ContarAlunosNaTurmaAsync(int turmaId)
+    {
+        return await _context.MatriculasTurma
+            .CountAsync(mt => mt.TurmaId == turmaId);
+    }
 }

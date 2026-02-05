@@ -33,6 +33,7 @@ public class AtualizarTurmaCommandHandler : IRequestHandler<AtualizarTurmaComman
         turma.DisciplinaId = request.Dto.DisciplinaId;
         turma.Semestre = request.Dto.Semestre;
         turma.Ano = request.Dto.Ano;
+        turma.Turno = request.Dto.Turno;
         turma.ProfessorId = request.Dto.ProfessorId;
         turma.Status = request.Dto.Status;
         turma.Capacidade = request.Dto.Capacidade;
@@ -57,6 +58,7 @@ public class AtualizarTurmaCommandHandler : IRequestHandler<AtualizarTurmaComman
             disciplina?.Nome ?? "N/A",
             turma.Semestre,
             turma.Ano,
+            turma.Turno,
             turma.ProfessorId,
             professor?.Nome ?? "N/A",
             turma.Status,

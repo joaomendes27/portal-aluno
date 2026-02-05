@@ -29,6 +29,11 @@ public class ProfessorRepository : IProfessorRepository
         return await _context.Professores.FirstOrDefaultAsync(p => p.Email == email);
     }
 
+    public async Task<List<Professor>> GetAllAsync()
+    {
+        return await _context.Professores.Where(p => p.Status == "Ativo").ToListAsync();
+    }
+
     public async Task AddAsync(Professor professor)
     {
         await _context.Professores.AddAsync(professor);

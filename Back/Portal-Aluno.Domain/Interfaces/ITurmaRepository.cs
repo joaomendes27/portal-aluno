@@ -9,4 +9,6 @@ public interface ITurmaRepository
     Task AddAsync(Turma turma);
     void Update(Turma turma);
     void Delete(Turma turma);
+    Task<List<Turma>> GetTurmasDisponiveisAsync(int cursoId, int semestre, string turno, int ano);
+    Task<int> ContarAlunosNaTurmaAsync(int turmaId);
 }
