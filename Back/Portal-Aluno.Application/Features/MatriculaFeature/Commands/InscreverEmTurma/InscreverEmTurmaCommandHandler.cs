@@ -33,11 +33,9 @@ public class InscreverEmTurmaCommandHandler : IRequestHandler<InscreverEmTurmaCo
         if (turma == null)
             throw new KeyNotFoundException($"Turma com ID {request.Dto.TurmaId} não encontrada.");
 
-        // Verifica se a turma é do mesmo curso da matrícula
         if (turma.CursoId != matricula.CursoId)
             throw new InvalidOperationException("A turma não pertence ao curso do aluno.");
 
-        // Verifica se já está inscrito
         var inscricaoExistente = await _matriculaTurmaRepository.GetByMatriculaAndTurmaAsync(request.Dto.MatriculaId, request.Dto.TurmaId);
         if (inscricaoExistente != null)
             throw new InvalidOperationException("Aluno já está inscrito nesta turma.");

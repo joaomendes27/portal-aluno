@@ -37,10 +37,9 @@ public class AdicionarDisciplinasAoCursoCommandHandler : IRequestHandler<Adicion
             if (disciplina == null)
                 throw new KeyNotFoundException($"Disciplina com ID {item.DisciplinaId} não encontrada.");
 
-            // Verifica se já existe o vínculo
             var vinculoExistente = await _cursoDisciplinaRepository.GetByCursoAndDisciplinaAsync(request.Dto.CursoId, item.DisciplinaId);
             if (vinculoExistente != null)
-                continue; // Ignora se já existe
+                continue; 
 
             novosCursoDisciplinas.Add(new CursoDisciplina
             {

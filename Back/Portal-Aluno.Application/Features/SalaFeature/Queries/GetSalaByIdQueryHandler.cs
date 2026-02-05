@@ -18,7 +18,7 @@ public class GetSalaByIdQueryHandler : IRequestHandler<GetSalaByIdQuery, SalaRes
         var sala = await _salaRepository.GetByIdAsync(request.Id);
         if (sala == null)
         {
-            throw new Exception("Sala não encontrada."); // Idealmente, uma exceção customizada
+            throw new Exception("Sala não encontrada."); 
         }
 
         return new SalaResponse(sala.Id, sala.Andar, sala.Numero);

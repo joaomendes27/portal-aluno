@@ -12,7 +12,7 @@ public record TurmaRequest(
     string? Status,
     int? Capacidade,
     string? DiaSemana,
-    string? HoraInicio, // formato: "HH:mm"
-    string? HoraFim,    // formato: "HH:mm"
+    string? HoraInicio,
+    string? HoraFim,    
     int? SalaId
 );

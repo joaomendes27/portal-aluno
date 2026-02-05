@@ -21,14 +21,12 @@ public class DeletarDisciplinaCommandHandler : IRequestHandler<DeletarDisciplina
 
     public async Task<Unit> Handle(DeletarDisciplinaCommand request, CancellationToken cancellationToken)
     {
-        // Primeiro remove os vínculos com cursos
         var vinculos = await _cursoDisciplinaRepository.GetByDisciplinaIdAsync(request.Id);
         if (vinculos.Any())
         {
             _cursoDisciplinaRepository.DeleteRange(vinculos);
         }
 
-        // Depois deleta a disciplina
         await _disciplinaRepository.DeleteAsync(request.Id);
         await _unitOfWork.SaveChangesAsync(cancellationToken);
         

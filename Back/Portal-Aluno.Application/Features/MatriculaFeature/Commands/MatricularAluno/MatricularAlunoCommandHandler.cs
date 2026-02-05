@@ -37,22 +37,18 @@ public class MatricularAlunoCommandHandler : IRequestHandler<MatricularAlunoComm
     {
         var dto = request.Dto;
 
-        // Validar aluno
         var aluno = await _alunoRepository.GetByIdAsync(dto.AlunoRa);
         if (aluno == null)
             throw new KeyNotFoundException($"Aluno com RA {dto.AlunoRa} não encontrado.");
 
-        // Validar curso
         var curso = await _cursoRepository.GetByIdAsync(dto.CursoId);
         if (curso == null)
             throw new KeyNotFoundException($"Curso com ID {dto.CursoId} não encontrado.");
 
-        // Verificar se já tem matrícula ativa
         var matriculaExistente = await _matriculaRepository.GetByAlunoRaAsync(dto.AlunoRa);
         if (matriculaExistente != null && matriculaExistente.Status == "Ativa")
             throw new InvalidOperationException($"Aluno com RA {dto.AlunoRa} já possui matrícula ativa.");
 
-        // Buscar disciplinas do curso para o semestre
         var disciplinasDoCurso = await _cursoDisciplinaRepository.GetByCursoIdAsync(dto.CursoId);
         var disciplinasDoSemestre = disciplinasDoCurso
             .Where(cd => cd.Semestre == dto.Semestre)
@@ -61,11 +57,9 @@ public class MatricularAlunoCommandHandler : IRequestHandler<MatricularAlunoComm
         if (!disciplinasDoSemestre.Any())
             throw new InvalidOperationException($"Não há disciplinas cadastradas para o semestre {dto.Semestre} do curso.");
 
-        // Buscar turmas disponíveis
         var turmasDisponiveis = await _turmaRepository.GetTurmasDisponiveisAsync(
             dto.CursoId, dto.Semestre, dto.Turno, dto.Ano);
 
-        // Criar a matrícula
         var matricula = new Matricula
         {
             Ra = dto.AlunoRa,
@@ -80,16 +74,14 @@ public class MatricularAlunoCommandHandler : IRequestHandler<MatricularAlunoComm
         await _matriculaRepository.AddAsync(matricula);
         await _unitOfWork.SaveChangesAsync(cancellationToken);
 
-        // Inscrever o aluno nas turmas
         var turmasInscritas = new List<TurmaInscritaResponse>();
         var avisos = new List<string>();
 
         foreach (var disciplinaCurso in disciplinasDoSemestre)
         {
-            // Buscar turmas dessa disciplina
             var turmasDaDisciplina = turmasDisponiveis
                 .Where(t => t.DisciplinaId == disciplinaCurso.DisciplinaId)
-                .OrderBy(t => t.Id) // Ordenar para pegar turma A, B, C...
+                .OrderBy(t => t.Id) 
                 .ToList();
 
             if (!turmasDaDisciplina.Any())
@@ -98,7 +90,6 @@ public class MatricularAlunoCommandHandler : IRequestHandler<MatricularAlunoComm
                 continue;
             }
 
-            // Tentar encontrar uma turma com vaga
             Turma? turmaComVaga = null;
             foreach (var turma in turmasDaDisciplina)
             {
@@ -116,7 +107,6 @@ public class MatricularAlunoCommandHandler : IRequestHandler<MatricularAlunoComm
                 continue;
             }
 
-            // Inscrever na turma
             var matriculaTurma = new MatriculaTurma
             {
                 MatriculaId = matricula.Id,
