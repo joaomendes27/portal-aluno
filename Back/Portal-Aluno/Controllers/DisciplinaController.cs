@@ -24,21 +24,21 @@ public class DisciplinaController : ControllerBase
     [HttpPost("CadastrarDisciplina")]
     public async Task<IActionResult> CadastrarDisciplina([FromBody] DisciplinaRequest request)
     {
-        var id = await _mediator.Send(new CreateDisciplinaCommand(request));
+        var id = await _mediator.Send(new CriarDisciplinaCommand(request));
         return CreatedAtAction(nameof(BuscarDisciplinaPorId), new { id }, request);
     }
 
     [HttpPut("AtualizarDisciplina/{id}")]
     public async Task<IActionResult> AtualizarDisciplina(int id, [FromBody] DisciplinaRequest request)
     {
-        await _mediator.Send(new UpdateDisciplinaCommand(id, request));
+        await _mediator.Send(new AtualizarDisciplinaCommand(id, request));
         return NoContent();
     }
 
     [HttpDelete("DeletarDisciplina/{id}")]
     public async Task<IActionResult> DeletarDisciplina(int id)
     {
-        await _mediator.Send(new DeleteDisciplinaCommand(id));
+        await _mediator.Send(new DeletarDisciplinaCommand(id));
         return NoContent();
     }
 

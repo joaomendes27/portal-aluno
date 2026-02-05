@@ -1,7 +1,9 @@
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Portal_Aluno.Application.Features.CursoFeature.Commands;
+using Portal_Aluno.Application.Features.CursoFeature.Commands.CadastrarCurso;
+using Portal_Aluno.Application.Features.CursoFeature.Commands.AtualizarCurso;
+using Portal_Aluno.Application.Features.CursoFeature.Commands.DeletarCurso;
 using Portal_Aluno.Application.Features.CursoFeature.DTOs;
 using Portal_Aluno.Application.Features.DisciplinaFeature.DTOs;
 using Portal_Aluno.Domain.Interfaces;
@@ -61,5 +63,19 @@ public class CursosController : ControllerBase
         };
 
         return Ok(response);
+    }
+
+    [HttpPut("AtualizarCurso/{id}")]
+    public async Task<IActionResult> AtualizarCurso(int id, [FromBody] AtualizarCursoRequest request)
+    {
+        await _mediator.Send(new AtualizarCursoCommand(id, request));
+        return NoContent();
+    }
+
+    [HttpDelete("DeletarCurso/{id}")]
+    public async Task<IActionResult> DeletarCurso(int id)
+    {
+        await _mediator.Send(new DeletarCursoCommand(id));
+        return NoContent();
     }
 }

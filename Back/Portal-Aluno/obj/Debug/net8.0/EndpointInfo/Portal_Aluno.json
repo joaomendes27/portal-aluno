@@ -147,6 +147,71 @@
         }
       }
     },
+    "/api/Cursos/AtualizarCurso/{id}": {
+      "put": {
+        "tags": [
+          "Cursos"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AtualizarCursoRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AtualizarCursoRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AtualizarCursoRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Cursos/DeletarCurso/{id}": {
+      "delete": {
+        "tags": [
+          "Cursos"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Disciplina/CadastrarDisciplina": {
       "post": {
         "tags": [
@@ -1051,6 +1116,24 @@
           "horaFim": {
             "type": "string",
             "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "AtualizarCursoRequest": {
+        "type": "object",
+        "properties": {
+          "nome": {
+            "type": "string",
+            "nullable": true
+          },
+          "grau": {
+            "type": "string",
+            "nullable": true
+          },
+          "cargaHoraria": {
+            "type": "integer",
+            "format": "int32"
           }
         },
         "additionalProperties": false

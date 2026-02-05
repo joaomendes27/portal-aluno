@@ -8,4 +8,6 @@ public interface ICursoRepository
     Task<List<Curso>> GetAllAsync();
     Task AddAsync(Curso curso);
     Task<Curso?> GetByIdWithDisciplinasAsync(int id);
+    void Update(Curso curso);
+    void Delete(Curso curso);
 }

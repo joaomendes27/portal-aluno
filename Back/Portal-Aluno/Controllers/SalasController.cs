@@ -40,21 +40,21 @@ public class SalasController : ControllerBase
     [HttpPost("CriarSala")]
     public async Task<ActionResult<SalaResponse>> CreateSala([FromBody] SalaRequest request)
     {
-        var result = await _mediator.Send(new CreateSalaCommand(request));
+        var result = await _mediator.Send(new CriarSalaCommand(request));
         return CreatedAtAction(nameof(GetSalasById), new { id = result.Id }, result);
     }
 
     [HttpPut("AtualizarSala")]
     public async Task<ActionResult<SalaResponse>> UpdateSala(int id, [FromBody] SalaRequest request)
     {
-        var result = await _mediator.Send(new UpdateSalaCommand(id, request));
+        var result = await _mediator.Send(new AtualizarSalaCommand(id, request));
         return Ok(result);
     }
 
     [HttpDelete("DeletarSala/{id}")]
     public async Task<IActionResult> DeleteSala(int id)
     {
-        await _mediator.Send(new DeleteSalaCommand(id));
+        await _mediator.Send(new DeletarSalaCommand(id));
         return NoContent();
     }
 }

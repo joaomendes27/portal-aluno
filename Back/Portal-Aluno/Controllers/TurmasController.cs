@@ -39,21 +39,21 @@ public class TurmasController : ControllerBase
     [HttpPost("CriarTurma")]
     public async Task<ActionResult<TurmaResponse>> Create([FromBody] TurmaRequest request)
     {
-        var result = await _mediator.Send(new CreateTurmaCommand(request));
+        var result = await _mediator.Send(new CriarTurmaCommand(request));
         return CreatedAtAction(nameof(GetTurmasById), new { id = result.Id }, result);
     }
 
     [HttpPut("AtualizarTurma")]
     public async Task<ActionResult<TurmaResponse>> UpdateTurma(int id, [FromBody] TurmaRequest request)
     {
-        var result = await _mediator.Send(new UpdateTurmaCommand(id, request));
+        var result = await _mediator.Send(new AtualizarTurmaCommand(id, request));
         return Ok(result);
     }
 
     [HttpDelete("DeletarTurma/{id}")]
     public async Task<IActionResult> DeleteTurma(int id)
     {
-        await _mediator.Send(new DeleteTurmaCommand(id));
+        await _mediator.Send(new DeletarTurmaCommand(id));
         return NoContent();
     }
 }

@@ -36,4 +36,14 @@ public class CursoRepository : ICursoRepository
                 .ThenInclude(cd => cd.Disciplina)
             .FirstOrDefaultAsync(c => c.Id == id);
     }
+
+    public void Update(Curso curso)
+    {
+        _context.Cursos.Update(curso);
+    }
+
+    public void Delete(Curso curso)
+    {
+        _context.Cursos.Remove(curso);
+    }
 }
