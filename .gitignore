@@ -46,20 +46,20 @@ Thumbs.db
 .vscode/copilot-chat/
 
 # Ignorar arquivos e pastas do .NET (back-end)
-back/bin/
-back/obj/
-back/*.user
-back/*.userosscache
-back/*.suo
-back/*.sln.docstates
+**/bin/
+**/obj/
+Back/*.user
+Back/*.userosscache
+Back/*.suo
+Back/*.sln.docstates
 
 # Ignorar arquivos temporários do sistema operacional
-back/*.nupkg
-back/out/
-back/build/
+Back/*.nupkg
+Back/out/
+Back/build/
 
 # Ignorar arquivos de configuração locais
-back/appsettings.Development.json
+Back/appsettings.Development.json
 front/appsettings.json
 
 # Ignorar arquivos de cache de IDE (Visual Studio, Rider, etc.)
