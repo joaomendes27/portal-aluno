@@ -14,6 +14,11 @@ public class AlunoRepository : IAlunoRepository
         _context = context;
     }
 
+    public async Task<Aluno?> GetByIdAsync(int ra)
+    {
+        return await _context.Alunos.FirstOrDefaultAsync(a => a.Ra == ra);
+    }
+
     public async Task<Aluno?> GetByCpfOuEmailAsync(string cpf, string email)
     {
         return await _context.Alunos
@@ -30,6 +35,11 @@ public class AlunoRepository : IAlunoRepository
         return await _context.Alunos.FirstOrDefaultAsync(a => a.Email == email);
     }
 
+    public async Task<List<Aluno>> GetAllAsync()
+    {
+        return await _context.Alunos.Where(a => a.Status == "Ativo").ToListAsync();
+    }
+
     public async Task AddAsync(Aluno aluno)
     {
         await _context.Alunos.AddAsync(aluno);
@@ -38,5 +48,14 @@ public class AlunoRepository : IAlunoRepository
     public async Task<bool> RaExistsAsync(int ra)
     {
         return await _context.Alunos.AnyAsync(a => a.Ra == ra);
+    }
+
+    public async Task DesativarAsync(int ra)
+    {
+        var aluno = await GetByIdAsync(ra);
+        if (aluno != null)
+        {
+            aluno.Status = "desativado";
+        }
     }
 }

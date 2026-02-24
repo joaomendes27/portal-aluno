@@ -1,8 +1,622 @@
 [
   {
+    "ContainingType": "Portal_Aluno.Controllers.AgendaController",
+    "Method": "GetAgendaHojeAluno",
+    "RelativePath": "api/Agenda/Alunos/Hoje",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Portal_Aluno.Application.Features.AgendaFeature.DTOs.AgendaHojeResponse, Portal_Aluno.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Portal_Aluno.Controllers.AgendaController",
+    "Method": "GetAgendaHojeProfessor",
+    "RelativePath": "api/Agenda/Professores/Hoje",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Portal_Aluno.Application.Features.AgendaFeature.DTOs.AgendaHojeResponse, Portal_Aluno.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Portal_Aluno.Controllers.AlunosController",
+    "Method": "BuscarAlunoPorRa",
+    "RelativePath": "api/Alunos/BuscarPorRa/{ra}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ra",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Portal_Aluno.Controllers.AlunosController",
+    "Method": "DesativarAluno",
+    "RelativePath": "api/Alunos/Desativar/{ra}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ra",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Portal_Aluno.Controllers.AlunosController",
+    "Method": "ListarAlunos",
+    "RelativePath": "api/Alunos/Listar",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Portal_Aluno.Controllers.CursosController",
+    "Method": "AtualizarCurso",
+    "RelativePath": "api/Cursos/AtualizarCurso/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "Portal_Aluno.Application.Features.CursoFeature.DTOs.AtualizarCursoRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Portal_Aluno.Controllers.CursosController",
+    "Method": "GetCursoById",
+    "RelativePath": "api/Cursos/BuscarCursoPorId/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Portal_Aluno.Controllers.CursosController",
+    "Method": "CadastrarCurso",
+    "RelativePath": "api/Cursos/CadastrarCurso",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Portal_Aluno.Application.Features.CursoFeature.DTOs.CadastrarCursoRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Portal_Aluno.Controllers.CursosController",
+    "Method": "DeletarCurso",
+    "RelativePath": "api/Cursos/DeletarCurso/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Portal_Aluno.Controllers.CursosController",
+    "Method": "GetAllCursos",
+    "RelativePath": "api/Cursos/ListarCursos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Portal_Aluno.Controllers.DisciplinaController",
+    "Method": "AtualizarDisciplina",
+    "RelativePath": "api/Disciplina/AtualizarDisciplina/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "Portal_Aluno.Application.Features.DisciplinaFeature.DTOs.DisciplinaRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Portal_Aluno.Controllers.DisciplinaController",
+    "Method": "BuscarDisciplinaPorId",
+    "RelativePath": "api/Disciplina/BuscarDisciplinaPorId/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Portal_Aluno.Application.Features.DisciplinaFeature.DTOs.DisciplinaResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Portal_Aluno.Controllers.DisciplinaController",
+    "Method": "CadastrarDisciplinas",
+    "RelativePath": "api/Disciplina/CadastrarDisciplinas",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Portal_Aluno.Application.Features.DisciplinaFeature.DTOs.CadastrarDisciplinasRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Portal_Aluno.Controllers.DisciplinaController",
+    "Method": "DeletarDisciplina",
+    "RelativePath": "api/Disciplina/DeletarDisciplina/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Portal_Aluno.Controllers.DisciplinaController",
+    "Method": "ListarDisciplinas",
+    "RelativePath": "api/Disciplina/ListarDisciplinas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Portal_Aluno.Application.Features.DisciplinaFeature.DTOs.DisciplinaResponse, Portal_Aluno.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Portal_Aluno.Controllers.MatriculasController",
+    "Method": "GetMatriculaPorAluno",
+    "RelativePath": "api/Matriculas/BuscarMatriculaPorAluno/{ra}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ra",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Portal_Aluno.Controllers.MatriculasController",
+    "Method": "GetMatriculaPorId",
+    "RelativePath": "api/Matriculas/BuscarMatriculaPorId/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Portal_Aluno.Controllers.MatriculasController",
+    "Method": "InscreverEmTurma",
+    "RelativePath": "api/Matriculas/InscreverEmTurma",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Portal_Aluno.Application.Features.MatriculaFeature.DTOs.InscreverEmTurmaRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Portal_Aluno.Controllers.MatriculasController",
+    "Method": "GetAllMatriculas",
+    "RelativePath": "api/Matriculas/ListarMatriculas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Portal_Aluno.Controllers.MatriculasController",
+    "Method": "MatricularAluno",
+    "RelativePath": "api/Matriculas/MatricularAluno",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Portal_Aluno.Application.Features.MatriculaFeature.DTOs.MatricularAlunoRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Portal_Aluno.Controllers.ProfessoresController",
+    "Method": "BuscarProfessorPorId",
+    "RelativePath": "api/Professores/BuscarPorId/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Portal_Aluno.Controllers.ProfessoresController",
+    "Method": "DesativarProfessor",
+    "RelativePath": "api/Professores/Desativar/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Portal_Aluno.Controllers.ProfessoresController",
+    "Method": "ListarProfessores",
+    "RelativePath": "api/Professores/Listar",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Portal_Aluno.Controllers.SalasController",
+    "Method": "UpdateSala",
+    "RelativePath": "api/Salas/AtualizarSala",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "request",
+        "Type": "Portal_Aluno.Application.Features.SalaFeature.DTOs.SalaRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Portal_Aluno.Application.Features.SalaFeature.DTOs.SalaResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Portal_Aluno.Controllers.SalasController",
+    "Method": "GetSalasById",
+    "RelativePath": "api/Salas/BuscarSalaPorId/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Portal_Aluno.Application.Features.SalaFeature.DTOs.SalaResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Portal_Aluno.Controllers.SalasController",
+    "Method": "CreateSala",
+    "RelativePath": "api/Salas/CriarSala",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Portal_Aluno.Application.Features.SalaFeature.DTOs.SalaRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Portal_Aluno.Application.Features.SalaFeature.DTOs.SalaResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Portal_Aluno.Controllers.SalasController",
+    "Method": "DeleteSala",
+    "RelativePath": "api/Salas/DeletarSala/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Portal_Aluno.Controllers.SalasController",
+    "Method": "GetAllSalas",
+    "RelativePath": "api/Salas/ListarSalas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Portal_Aluno.Application.Features.SalaFeature.DTOs.SalaResponse, Portal_Aluno.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Portal_Aluno.Controllers.TurmasController",
+    "Method": "UpdateTurma",
+    "RelativePath": "api/Turmas/AtualizarTurma",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "request",
+        "Type": "Portal_Aluno.Application.Features.TurmaFeature.DTOs.TurmaRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Portal_Aluno.Application.Features.TurmaFeature.DTOs.TurmaResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Portal_Aluno.Controllers.TurmasController",
+    "Method": "GetTurmasById",
+    "RelativePath": "api/Turmas/BuscarTurmaPorId/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Portal_Aluno.Application.Features.TurmaFeature.DTOs.TurmaResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Portal_Aluno.Controllers.TurmasController",
+    "Method": "Create",
+    "RelativePath": "api/Turmas/CriarTurma",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Portal_Aluno.Application.Features.TurmaFeature.DTOs.TurmaRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Portal_Aluno.Application.Features.TurmaFeature.DTOs.TurmaResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Portal_Aluno.Controllers.TurmasController",
+    "Method": "DeleteTurma",
+    "RelativePath": "api/Turmas/DeletarTurma/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Portal_Aluno.Controllers.TurmasController",
+    "Method": "GetAllTurmas",
+    "RelativePath": "api/Turmas/ListarTurmas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Portal_Aluno.Application.Features.TurmaFeature.DTOs.TurmaResponse, Portal_Aluno.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "Portal_Aluno.Controllers.UsuariosController",
     "Method": "CadastrarAdmin",
-    "RelativePath": "api/Usuarios/cadastrar-admin",
+    "RelativePath": "api/Usuarios/CadastrarAdmin",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -18,7 +632,7 @@
   {
     "ContainingType": "Portal_Aluno.Controllers.UsuariosController",
     "Method": "CadastrarAluno",
-    "RelativePath": "api/Usuarios/cadastrar-aluno",
+    "RelativePath": "api/Usuarios/CadastrarAluno",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -34,7 +648,7 @@
   {
     "ContainingType": "Portal_Aluno.Controllers.UsuariosController",
     "Method": "CadastrarProfessor",
-    "RelativePath": "api/Usuarios/cadastrar-professor",
+    "RelativePath": "api/Usuarios/CadastrarProfessor",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -49,8 +663,24 @@
   },
   {
     "ContainingType": "Portal_Aluno.Controllers.UsuariosController",
+    "Method": "EsqueciSenha",
+    "RelativePath": "api/Usuarios/EsqueciSenha",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Portal_Aluno.Application.Features.UsuarioFeature.DTOs.EsqueciSenhaRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Portal_Aluno.Controllers.UsuariosController",
     "Method": "Login",
-    "RelativePath": "api/Usuarios/login",
+    "RelativePath": "api/Usuarios/Login",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -58,6 +688,22 @@
       {
         "Name": "request",
         "Type": "Portal_Aluno.Application.Features.UsuarioFeature.DTOs.LoginRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Portal_Aluno.Controllers.UsuariosController",
+    "Method": "RedefinirSenha",
+    "RelativePath": "api/Usuarios/RedefinirSenha",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Portal_Aluno.Application.Features.UsuarioFeature.DTOs.RedefinirSenhaRequest",
         "IsRequired": true
       }
     ],
