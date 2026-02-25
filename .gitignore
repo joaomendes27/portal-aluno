@@ -61,6 +61,8 @@ Back/build/
 # Ignorar arquivos de configuração locais
 Back/appsettings.Development.json
 front/appsettings.json
+**/appsettings.json
+**/appsettings.*.json
 
 # Ignorar arquivos de cache de IDE (Visual Studio, Rider, etc.)
 .vscode/
@@ -75,3 +77,4 @@ front/.next/
 
 # Ignorar arquivos de logs do front-end
 front/logs/
+ 
