@@ -77,4 +77,5 @@ front/.next/
 
 # Ignorar arquivos de logs do front-end
 front/logs/
- 
+
+.env
