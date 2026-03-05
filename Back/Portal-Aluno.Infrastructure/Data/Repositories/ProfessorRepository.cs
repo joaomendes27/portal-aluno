@@ -14,6 +14,11 @@ public class ProfessorRepository : IProfessorRepository
         _context = context;
     }
 
+    public async Task<Professor?> GetByIdAsync(int id)
+    {
+        return await _context.Professores.FindAsync(id);
+    }
+
     public async Task<Professor?> GetByCpfAsync(string cpf)
     {
         return await _context.Professores.FirstOrDefaultAsync(p => p.Cpf == cpf);
@@ -24,8 +29,22 @@ public class ProfessorRepository : IProfessorRepository
         return await _context.Professores.FirstOrDefaultAsync(p => p.Email == email);
     }
 
+    public async Task<List<Professor>> GetAllAsync()
+    {
+        return await _context.Professores.Where(p => p.Status == "Ativo").ToListAsync();
+    }
+
     public async Task AddAsync(Professor professor)
     {
         await _context.Professores.AddAsync(professor);
+    }
+
+    public async Task DesativarAsync(int id)
+    {
+        var professor = await GetByIdAsync(id);
+        if (professor != null)
+        {
+            professor.Status = "desativado";
+        }
     }
 }

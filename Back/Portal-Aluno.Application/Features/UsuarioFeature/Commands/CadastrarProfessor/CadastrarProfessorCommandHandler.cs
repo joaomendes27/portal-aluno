@@ -85,7 +85,8 @@ public class CadastrarProfessorCommandHandler : IRequestHandler<CadastrarProfess
             Login = request.Dto.Email,
             Senha = senhaHashNovo,
             Tipo = "professor",
-            ReferenciaId = novoProfessor.Id.ToString()
+            ReferenciaId = novoProfessor.Id.ToString(),
+            Email = request.Dto.Email
         };
         await _usuarioRepository.AddAsync(novoUsuarioCrido);
 

@@ -27,7 +27,8 @@ public class CadastrarAdminCommandHandler : IRequestHandler<CadastrarAdminComman
         {
             Login = request.Dto.Email,
             Senha = senhaHash,
-            Tipo = "adm"
+            Tipo = "adm",
+            Email = request.Dto.Email
         };
         await _usuarioRepository.AddAsync(novoUsuario);
         await _unitOfWork.SaveChangesAsync(cancellationToken);

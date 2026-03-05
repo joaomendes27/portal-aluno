@@ -86,7 +86,8 @@ public class CadastrarAlunoCommandHandler : IRequestHandler<CadastrarAlunoComman
             Login = novoAluno.Ra.ToString(),
             Senha = senhaHash,
             Tipo = "aluno",
-            ReferenciaId = novoAluno.Ra.ToString()
+            ReferenciaId = novoAluno.Ra.ToString(),
+            Email = novoAluno.Email
         };
         await _usuarioRepository.AddAsync(novoUsuario);
         

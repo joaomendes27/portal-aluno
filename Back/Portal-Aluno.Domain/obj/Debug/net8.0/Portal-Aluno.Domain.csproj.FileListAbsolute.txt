@@ -1,5 +1,0 @@
-C:\Users\MOSTEN\Desktop\Pessoal\portal-aluno\Back\Portal-Aluno.Domain\obj\Debug\net8.0\Portal-Aluno.Domain.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\MOSTEN\Desktop\Pessoal\portal-aluno\Back\Portal-Aluno.Domain\obj\Debug\net8.0\Portal-Aluno.Domain.AssemblyInfoInputs.cache
-C:\Users\MOSTEN\Desktop\Pessoal\portal-aluno\Back\Portal-Aluno.Domain\obj\Debug\net8.0\Portal-Aluno.Domain.AssemblyInfo.cs
-C:\Users\MOSTEN\Desktop\Pessoal\portal-aluno\Back\Portal-Aluno.Domain\obj\Debug\net8.0\Portal-Aluno.Domain.csproj.CoreCompileInputs.cache
-C:\Users\MOSTEN\Desktop\Pessoal\portal-aluno\Back\Portal-Aluno.Domain\obj\Debug\net8.0\Portal-Aluno.Domain.sourcelink.json
