@@ -1,9 +1,10 @@
+import AuthPage from "./pages/AuthPage"
 
 
 function App() {
 
   return (
-    <p>Hello</p>
+    <AuthPage></AuthPage>
   )
 }
 
