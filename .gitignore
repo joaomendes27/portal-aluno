@@ -79,3 +79,6 @@ front/.next/
 front/logs/
 
 .env
+
+# Ignorar pastas de agentes
+**/.agents/
